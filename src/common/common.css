@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet');
+
+#root {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background-image: url("../img/grain-bg.jpeg");
+  background-repeat: repeat;
+  background-size: 15%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.scroll {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 60px;
+  right: -80px;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 81.3%
+    );
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 0px #888;
+  transition: 300ms;
+}
+
+.scroll i {
+  margin-top: 10px;
+  text-shadow: 0 0 2px #fff;
+}
+
+.scroll:hover i {
+  animation-name: rotate;
+  animation-duration: 300ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rotate {
+  from {margin-top: 15px}
+  to {margin-top: 5px}
+}
+
+.visible {
+  right: 40px;
+  transition: all 400ms;
+  transform: rotate(360deg);
+}
