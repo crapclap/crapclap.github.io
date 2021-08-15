@@ -67,7 +67,7 @@ const Sugar: React.FC<Props> = props => {
         <Grid container spacing={0} className={grid.top_root}>
 
           {/* ~~~~~ ALBUM SECTION ~~~~~ */}
-          <Grid item xs={12} md={5} className='grid.album_root'>
+          <Grid item xs={12} md={5} className={grid.album_root}>
             <Grid container spacing={0} className={grid.album_container}>
 
               {/* ALBUM ARTWORK */}
@@ -134,31 +134,31 @@ const Sugar: React.FC<Props> = props => {
               {/* SONG LIST */}
               <Grid item xs={12} md={12} className='grid.info_song_list'>
                 <List className={cont.song_list}>
-                  <Divider className={cont.song_list_divider}/>
+                  <Divider className={cont.song_list_divider} />
                   <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#PulpFiction">
                       <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider className={cont.song_list_divider}/>
+                  <Divider className={cont.song_list_divider} />
                   <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#OneThreeFour">
                       <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider className={cont.song_list_divider}/>
+                  <Divider className={cont.song_list_divider} />
                   <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#Summergreen">
                       <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider className={cont.song_list_divider}/>
+                  <Divider className={cont.song_list_divider} />
                   <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#AmericanLemonade">
                       <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider className={cont.song_list_divider}/>
+                  <Divider className={cont.song_list_divider} />
                 </List>
               </Grid>
 
@@ -191,7 +191,7 @@ const Sugar: React.FC<Props> = props => {
             <Grid item xs={6} />
             <Grid item xs={6}>
               <div className={cont.bottom_section}>
-                <img src={AlbumLogo} alt='album_logo' className={cont.bottom_logo}/>
+                <img src={AlbumLogo} alt='album_logo' className={cont.bottom_logo} />
               </div>
             </Grid>
           </Grid>
@@ -215,6 +215,14 @@ const gridStyles = makeStyles((theme: Theme) =>
       },
     },
     album_root: {
+      [theme.breakpoints.down('sm')]: {
+        marginBottom: 30,
+      },
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 30,
+      },
+      [theme.breakpoints.up('lg')]: {
+      },
     },
     album_container: {
       padding: '5%',
@@ -263,24 +271,20 @@ const useStyles = makeStyles((theme: Theme) =>
 
     // INFO SECTION
     info_sub_bg: {
-      // [theme.breakpoints.down('sm')]: {
-      //   backgroundColor: 'white',
-      // },
+      [theme.breakpoints.down('sm')]: {
+        backgroundColor: 'white',
+      },
       [theme.breakpoints.up('md')]: {
         backgroundColor: 'white',
       },
       [theme.breakpoints.up('lg')]: {
         backgroundColor: 'white',
-      '&:hover': {
-        background: 'transparent',
-      },
+        '&:hover': {
+          background: 'transparent',
+        },
       },
       width: '100%',
       height: '100%',
-      backgroundColor: 'white',
-      '&:hover': {
-        background: 'transparent',
-      },
       borderRadius: '12px',
       textAlign: 'center',
     },
@@ -342,7 +346,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         color: 'grey',
       },
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       fontSize: 13,
     },
 

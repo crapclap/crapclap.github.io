@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme: Theme) =>
     logo: {
       height: 37,
       width: 92,
-      padding: 10
+      padding: 10,
+      marginLeft: 10,
     },
     bar: {
       height: '10vh',

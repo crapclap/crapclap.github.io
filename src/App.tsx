@@ -19,12 +19,12 @@ function App() {
       <Router  basename={process.env.PUBLIC_URL}>
         <div>
           <Header />
-          {/* <Switch> */}
+          <Switch>
             <Route exact path="/" component={Top} />
             <Route exact path="/crapclap" component={Top} />
             <Route exact path="/discography" component={Discography} />
             <Route exact path="/discography/sugar" component={Sugar} />
-          {/* </Switch> */}
+          </Switch>
           <Footer />
         </div>
       </Router>
