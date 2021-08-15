@@ -64,7 +64,7 @@ const Sugar: React.FC<Props> = props => {
 
       {/* ~~~~~ TOP SECTION ~~~~~ */}
       <Container maxWidth='md'>
-        <Grid container spacing={0} className='grid.top_root'>
+        <Grid container spacing={0} className={grid.top_root}>
 
           {/* ~~~~~ ALBUM SECTION ~~~~~ */}
           <Grid item xs={12} md={5} className='grid.album_root'>
@@ -134,31 +134,31 @@ const Sugar: React.FC<Props> = props => {
               {/* SONG LIST */}
               <Grid item xs={12} md={12} className='grid.info_song_list'>
                 <List className={cont.song_list}>
-                  <Divider />
-                  <ListItem button>
+                  <Divider className={cont.song_list_divider}/>
+                  <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#PulpFiction">
                       <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider />
-                  <ListItem button>
+                  <Divider className={cont.song_list_divider}/>
+                  <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#OneThreeFour">
                       <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider />
-                  <ListItem button>
+                  <Divider className={cont.song_list_divider}/>
+                  <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#Summergreen">
                       <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider />
-                  <ListItem button>
+                  <Divider className={cont.song_list_divider}/>
+                  <ListItem button className={cont.song_list_button}>
                     <ListItemLink href="#AmericanLemonade">
                       <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
                     </ListItemLink>
                   </ListItem>
-                  <Divider />
+                  <Divider className={cont.song_list_divider}/>
                 </List>
               </Grid>
 
@@ -190,8 +190,8 @@ const Sugar: React.FC<Props> = props => {
           <Grid container spacing={3}>
             <Grid item xs={6} />
             <Grid item xs={6}>
-              <div className={cont.bottom_logo}>
-                <img src={AlbumLogo} alt='album_logo' />
+              <div className={cont.bottom_section}>
+                <img src={AlbumLogo} alt='album_logo' className={cont.bottom_logo}/>
               </div>
             </Grid>
           </Grid>
@@ -207,10 +207,14 @@ const gridStyles = makeStyles((theme: Theme) =>
   createStyles({
 
     top_root: {
-      // margintTop: 120,
+      [theme.breakpoints.down('sm')]: {
+        marginTop: 60,
+      },
+      [theme.breakpoints.up('md')]: {
+        marginTop: 120,
+      },
     },
     album_root: {
-      // marginTop: 60
     },
     album_container: {
       padding: '5%',
@@ -222,7 +226,6 @@ const gridStyles = makeStyles((theme: Theme) =>
     album_order: {
     },
     info_root: {
-      // marginTop: 60
     },
     info_container: {
       padding: '5%',
@@ -243,28 +246,42 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
     },
     album_title: {
-      marginTop: 50,
+      marginTop: 53,
       marginLeft: 0,
       fontFamily: "Helvetica",
       fontWeight: "bold",
+      fontSize: 25,
       color: "black",
     },
     album_order: {
-      marginTop: 65,
+      marginTop: 60,
       marginRight: 0,
-      fontFamily: "sans-serif",
+      fontFamily: "Brandon Grotesque",
+      fontSize: 12,
       color: "gray",
     },
 
     // INFO SECTION
     info_sub_bg: {
+      // [theme.breakpoints.down('sm')]: {
+      //   backgroundColor: 'white',
+      // },
+      [theme.breakpoints.up('md')]: {
+        backgroundColor: 'white',
+      },
+      [theme.breakpoints.up('lg')]: {
+        backgroundColor: 'white',
+      '&:hover': {
+        background: 'transparent',
+      },
+      },
       width: '100%',
       height: '100%',
       backgroundColor: 'white',
       '&:hover': {
         background: 'transparent',
       },
-      borderRadius: '15px',
+      borderRadius: '12px',
       textAlign: 'center',
     },
     info_sub_apple_logo: {
@@ -289,46 +306,54 @@ const useStyles = makeStyles((theme: Theme) =>
     // LISTEN ALBUM
     listen_album: {
       marginTop: 0,
-      marginBottom: 20,
-      fontFamily: "Hiragino Sans",
+      fontFamily: "ヒラギノ角ゴシック",
       fontWeight: "bold",
-      color: "grey",
+      color: "#B2B2B2",
     },
 
     // READ LYRICS
     read_lyrics: {
       marginTop: 60,
-      marginBottom: 20,
-      fontFamily: "Hiragino Sans",
+      fontFamily: "ヒラギノ角ゴシック",
       fontWeight: "bold",
-      color: "grey",
+      color: "#B2B2B2",
     },
 
     // LYRIC LIST
     song_list: {
       marginTop: 0,
-      align: 'center',
-      width: '90%',
-      fontFamily: "sans-serif",
+      align: 'left',
+      width: '100%',
+      fontFamily: "ヒラギノ角ゴシック",
       backgroundColor: 'transparent',
+    },
+    song_list_button: {
+      paddingLeft: 0,
+    },
+    song_list_divider: {
+      backgroundColor: '#E8E8E8',
     },
     song_num: {
       color: 'gray',
-      fontSize: 15,
+      fontSize: 13,
     },
     song_title: {
       color: 'black',
       '&:hover': {
         color: 'grey',
       },
-      fontSize: 15,
+      fontWeight: 'bold',
+      fontSize: 13,
     },
 
     // BOTTOM LOGO
-    bottom_logo: {
+    bottom_section: {
       marginTop: 200,
       paddingRight: 0,
       paddingBottom: 50,
+    },
+    bottom_logo: {
+      width: '80%',
     },
   })
 )

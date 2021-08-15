@@ -23,7 +23,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
 }
 
@@ -32,7 +32,7 @@ html {
   width: 40px;
   height: 40px;
   position: fixed;
-  bottom: 60px;
+  bottom: 30px;
   right: -80px;
   border-radius: 100%;
   background-image: radial-gradient(
@@ -65,7 +65,7 @@ html {
 }
 
 .visible {
-  right: 40px;
+  right: 30px;
   transition: all 400ms;
   transform: rotate(360deg);
 }
