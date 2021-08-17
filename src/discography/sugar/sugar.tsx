@@ -84,9 +84,12 @@ const Sugar: React.FC<Props> = props => {
 
               {/* ALBUM ORDER: 3RD EP */}
               <Grid item xs={6} md={6} className={grid.album_order}>
-                <Typography variant="subtitle2" align='right' className={cont.album_order}>
+                {/* <Typography variant="subtitle2" align='right' className={cont.album_order}>
                   3rd EP
-                </Typography>
+                </Typography> */}
+                <div className={cont.album_order}>
+                  3rd EP
+                </div>
               </Grid>
 
             </Grid>
@@ -134,31 +137,31 @@ const Sugar: React.FC<Props> = props => {
               {/* SONG LIST */}
               <Grid item xs={12} md={12} className='grid.info_song_list'>
                 <List className={cont.song_list}>
-                  <Divider className={cont.song_list_divider} />
-                  <ListItem button className={cont.song_list_button}>
-                    <ListItemLink href="#PulpFiction">
-                      <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
-                    </ListItemLink>
-                  </ListItem>
-                  <Divider className={cont.song_list_divider} />
-                  <ListItem button className={cont.song_list_button}>
-                    <ListItemLink href="#OneThreeFour">
-                      <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
-                    </ListItemLink>
-                  </ListItem>
-                  <Divider className={cont.song_list_divider} />
-                  <ListItem button className={cont.song_list_button}>
-                    <ListItemLink href="#Summergreen">
-                      <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
-                    </ListItemLink>
-                  </ListItem>
-                  <Divider className={cont.song_list_divider} />
-                  <ListItem button className={cont.song_list_button}>
-                    <ListItemLink href="#AmericanLemonade">
-                      <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
-                    </ListItemLink>
-                  </ListItem>
-                  <Divider className={cont.song_list_divider} />
+                  <Divider className={cont.song_list_divider} variant='fullWidth' />
+                  {/* <ListItem button className={cont.song_list_button}> */}
+                  <ListItemLink href="#PulpFiction" className={cont.song_list_button}>
+                    <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
+                  </ListItemLink>
+                  {/* </ListItem> */}
+                  <Divider className={cont.song_list_divider} variant='fullWidth' />
+                  {/* <ListItem button className={cont.song_list_button}> */}
+                  <ListItemLink href="#OneThreeFour" className={cont.song_list_button}>
+                    <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
+                  </ListItemLink>
+                  {/* </ListItem> */}
+                  <Divider className={cont.song_list_divider} variant='fullWidth' />
+                  {/* <ListItem button className={cont.song_list_button}> */}
+                  <ListItemLink href="#Summergreen" className={cont.song_list_button}>
+                    <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
+                  </ListItemLink>
+                  {/* </ListItem> */}
+                  <Divider className={cont.song_list_divider} variant='fullWidth' />
+                  {/* <ListItem button className={cont.song_list_button}> */}
+                  <ListItemLink href="#AmericanLemonade" className={cont.song_list_button}>
+                    <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
+                  </ListItemLink>
+                  {/* </ListItem> */}
+                  <Divider className={cont.song_list_divider} variant='fullWidth' />
                 </List>
               </Grid>
 
@@ -264,6 +267,7 @@ const useStyles = makeStyles((theme: Theme) =>
     album_order: {
       marginTop: 60,
       marginRight: 0,
+      textAlign: 'right',
       fontFamily: "Brandon Grotesque",
       fontSize: 12,
       color: "gray",
@@ -280,7 +284,7 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('lg')]: {
         backgroundColor: 'white',
         '&:hover': {
-          background: 'transparent',
+          background: 'rgba(255, 255, 255, 0.7)',
         },
       },
       width: '100%',
@@ -333,6 +337,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     song_list_button: {
       paddingLeft: 0,
+      color: 'black',
+      '&:hover': {
+        color: 'grey',
+      },
+      height: 55,
     },
     song_list_divider: {
       backgroundColor: '#E8E8E8',
@@ -342,11 +351,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: 13,
     },
     song_title: {
-      color: 'black',
-      '&:hover': {
-        color: 'grey',
-      },
-      // fontWeight: 'bold',
+      fontWeight: 'bold',
       fontSize: 13,
     },
 

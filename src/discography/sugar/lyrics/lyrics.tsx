@@ -263,7 +263,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 10,
       flexGrow: 1,
       fontFamily: 'ヒラギノ角ゴシック',
-      // fontWeight: 'bold',
+      fontWeight: 'bold',
       fontSize: 25,
       color: "#0D1B22",
     },
