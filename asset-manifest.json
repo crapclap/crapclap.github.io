@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c950ab09.chunk.css",
-    "main.js": "/static/js/main.78920e8a.chunk.js",
-    "main.js.map": "/static/js/main.78920e8a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a0b87afb.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a0b87afb.js.map",
-    "static/js/2.05a11274.chunk.js": "/static/js/2.05a11274.chunk.js",
-    "static/js/2.05a11274.chunk.js.map": "/static/js/2.05a11274.chunk.js.map",
-    "static/js/3.754859cf.chunk.js": "/static/js/3.754859cf.chunk.js",
-    "static/js/3.754859cf.chunk.js.map": "/static/js/3.754859cf.chunk.js.map",
+    "main.css": "/static/css/main.0e69c6d5.chunk.css",
+    "main.js": "/static/js/main.78885a11.chunk.js",
+    "main.js.map": "/static/js/main.78885a11.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f1a96168.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f1a96168.js.map",
+    "static/js/2.04a53ca1.chunk.js": "/static/js/2.04a53ca1.chunk.js",
+    "static/js/2.04a53ca1.chunk.js.map": "/static/js/2.04a53ca1.chunk.js.map",
+    "static/js/3.e9996b99.chunk.js": "/static/js/3.e9996b99.chunk.js",
+    "static/js/3.e9996b99.chunk.js.map": "/static/js/3.e9996b99.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c950ab09.chunk.css.map": "/static/css/main.c950ab09.chunk.css.map",
-    "static/js/2.05a11274.chunk.js.LICENSE.txt": "/static/js/2.05a11274.chunk.js.LICENSE.txt",
+    "static/css/main.0e69c6d5.chunk.css.map": "/static/css/main.0e69c6d5.chunk.css.map",
+    "static/js/2.04a53ca1.chunk.js.LICENSE.txt": "/static/js/2.04a53ca1.chunk.js.LICENSE.txt",
     "static/media/apple-music.49964240.svg": "/static/media/apple-music.49964240.svg",
+    "static/media/arrow.edc188b7.svg": "/static/media/arrow.edc188b7.svg",
     "static/media/cc_logo.86234b02.jpg": "/static/media/cc_logo.86234b02.jpg",
     "static/media/common.css": "/static/media/grain-bg.446a890a.jpeg",
     "static/media/logo.80eb1cf2.svg": "/static/media/logo.80eb1cf2.svg",
@@ -21,9 +22,9 @@
     "static/media/sugar-logo.9a4947d5.svg": "/static/media/sugar-logo.9a4947d5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a0b87afb.js",
-    "static/js/2.05a11274.chunk.js",
-    "static/css/main.c950ab09.chunk.css",
-    "static/js/main.78920e8a.chunk.js"
+    "static/js/runtime-main.f1a96168.js",
+    "static/js/2.04a53ca1.chunk.js",
+    "static/css/main.0e69c6d5.chunk.css",
+    "static/js/main.78885a11.chunk.js"
   ]
 }
