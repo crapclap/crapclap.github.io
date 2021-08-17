@@ -1,4 +1,5 @@
 import React from 'react'
+import smoothscroll from 'smoothscroll-polyfill';
 import { 
   BrowserRouter as Router,
   // HashRouter as Router,
@@ -12,6 +13,8 @@ import Footer from './common/footer/footer'
 import Top from './top/top'
 import Discography from './discography/discography'
 import Sugar from './discography/sugar/sugar'
+
+smoothscroll.polyfill();
 
 function App() {
   return (

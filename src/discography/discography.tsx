@@ -1,5 +1,7 @@
 import React from 'react'
 
+import "../common/common.css"
+
 const Discography = () => {
 
   return (

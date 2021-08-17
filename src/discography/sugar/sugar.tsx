@@ -44,7 +44,7 @@ const Sugar = () => {
 
       {/* ~~~~~ Scroll Button ~~~~~ */}
       <div id="ScrollToTop" className="scroll">
-        <Scroll to="Header" smooth={true} duration={20}>
+        <Scroll to="Header" smooth={true} duration={100}>
           <img src={Arrow} className={cont.pointer} />
         </Scroll>
       </div>
@@ -91,7 +91,7 @@ const Sugar = () => {
               </Grid>
 
               {/* SUBSCRIPTION: APPLE MUSIC */}
-              <Grid item xs={6} md={6} className='grid.info_sub_apple'>
+              <Grid item xs={6} md={6} className={grid.info_sub_apple}>
                 <div className={cont.info_sub_bg}>
                   <a href='https://music.apple.com/jp/album/sugar-ep/1579303124?l=en&ls=1&app=music'>
                     <img src={AppleMusicLogo} className={cont.info_sub_apple_logo} alt='info_sub_apple_logo' />
@@ -100,7 +100,7 @@ const Sugar = () => {
               </Grid>
 
               {/* SUBSCRIPTION: SPOTIFY */}
-              <Grid item xs={6} md={6} className='grid.info_spotify'>
+              <Grid item xs={6} md={6} className={grid.info_sub_spotify}>
                 <div className={cont.info_sub_bg}>
                   <a href='https://open.spotify.com/artist/1qefytAD4qHuTqxo2iw6sD?si=SNQVLhymSeKPNMvxnhAxDA&dl_branch=1'>
                     <img src={SpotifyLogo} className={cont.info_sub_spotify_logo} alt='info_sub_spotify_logo' />
@@ -121,7 +121,7 @@ const Sugar = () => {
                 <List className={cont.song_list}>
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
 
-                  <Scroll to="PulpFiction" smooth={true} duration={20}>
+                  <Scroll to="PulpFiction" smooth={true} duration={100}>
                     <ListItem className={cont.song_list_button}>
                       <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
                     </ListItem>
@@ -129,7 +129,7 @@ const Sugar = () => {
 
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
 
-                  <Scroll to="OneThreeFour" smooth={true} duration={20}>
+                  <Scroll to="OneThreeFour" smooth={true} duration={100}>
                     <ListItem className={cont.song_list_button}>
                       <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
                     </ListItem>
@@ -137,7 +137,7 @@ const Sugar = () => {
 
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
 
-                  <Scroll to="Summergreen" smooth={true} duration={20}>
+                  <Scroll to="Summergreen" smooth={true} duration={100}>
                     <ListItem className={cont.song_list_button}>
                       <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
                     </ListItem>
@@ -145,7 +145,7 @@ const Sugar = () => {
 
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
 
-                  <Scroll to="AmericanLemonade" smooth={true} duration={20}>
+                  <Scroll to="AmericanLemonade" smooth={true} duration={100}>
                     <ListItem className={cont.song_list_button}>
                       <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
                     </ListItem>
@@ -234,6 +234,16 @@ const gridStyles = makeStyles((theme: Theme) =>
     info_container: {
       padding: 20,
     },
+    info_sub_apple: {
+      padding: 0,
+      // width: 150,
+      // height: 100,
+    },
+    info_sub_spotify: {
+      padding: 0,
+      // width: 150,
+      // height: 100,
+    }
   })
 )
 
@@ -261,7 +271,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: 60,
       marginRight: 0,
       textAlign: 'right',
-      fontFamily: "Brandon Grotesque",
+      // fontFamily: "Brandon Grotesque",
       fontSize: 12,
       color: "gray",
     },
@@ -273,6 +283,9 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.up('md')]: {
         backgroundColor: 'white',
+        '&:hover': {
+          background: 'rgba(255, 255, 255, 0.7)',
+        },
       },
       [theme.breakpoints.up('lg')]: {
         backgroundColor: 'white',
@@ -280,9 +293,10 @@ const useStyles = makeStyles((theme: Theme) =>
           background: 'rgba(255, 255, 255, 0.7)',
         },
       },
-      width: '100%',
-      height: '100%',
+      width: 148,
+      height: 95,
       borderRadius: '12px',
+      margin: 'auto',
       textAlign: 'center',
     },
     info_sub_apple_logo: {
@@ -329,11 +343,25 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     song_list_button: {
       paddingLeft: 0,
-      color: 'black',
-      '&:hover': {
-        color: 'grey',
-      },
       height: 55,
+      [theme.breakpoints.down('sm')]: {
+        fontWeight: 600,
+        color: '#383D40',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+        '&:hover': {
+          color: 'grey',
+        },
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+        '&:hover': {
+          color: 'grey',
+        },
+      },
     },
     song_list_divider: {
       backgroundColor: '#E8E8E8',
@@ -343,7 +371,6 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: 13,
     },
     song_title: {
-      fontWeight: 'bold',
       fontSize: 13,
     },
 

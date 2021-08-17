@@ -10,6 +10,8 @@ import {
   Theme
 } from '@material-ui/core/styles';
 
+import "../../../common/common.css"
+
 export const PulpFiction = () => {
 
   const classes = useStyles();
@@ -263,9 +265,21 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 0,
       flexGrow: 1,
       fontFamily: 'ヒラギノ角ゴシック',
-      fontWeight: 'bold',
       fontSize: 25,
-      color: "#0D1B22",
+      // fontWeight: 500,
+      // color: "#0D1B22",
+      [theme.breakpoints.down('sm')]: {
+        fontWeight: 600,
+        color: '#383D40',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+      },
     },
     lyric: {
       marginLeft: 0,
