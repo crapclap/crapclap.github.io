@@ -1,9 +1,8 @@
 import React from 'react'
+import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
-import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
+import ListItem from '@material-ui/core/ListItem';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp as Pointer } from '@fortawesome/free-solid-svg-icons';
 
 import {
   PulpFiction,
@@ -23,30 +22,16 @@ import Artwork from '../../img/sugar-artwork.jpg'
 import AlbumLogo from '../../img/sugar-logo.svg'
 import AppleMusicLogo from '../../img/apple-music.svg'
 import SpotifyLogo from '../../img/spotify.png'
+import Arrow from '../../img/arrow.svg'
 import "../../common/common.css"
 
-type Props = {
-  onClick: (event: React.MouseEvent<HTMLInputElement>) => void
-}
-
-const Sugar: React.FC<Props> = props => {
+const Sugar = () => {
 
   const cont = useStyles();
   const grid = gridStyles();
 
-  function ListItemLink(props: ListItemProps<'a', { button?: true }>) {
-    return <ListItem button component="a" {...props} />;
-  }
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
   window.addEventListener('scroll', e => {
-    const el: any = document.getElementById('jsScroll');
+    const el: any = document.getElementById('ScrollToTop');
     if (window.scrollY > 1000) {
       el.classList.add('visible');
     } else {
@@ -55,11 +40,13 @@ const Sugar: React.FC<Props> = props => {
   });
 
   return (
-    <div className={cont.root}>
+    <div className={cont.root} id='Top'>
 
-      {/* SCROLL ICON */}
-      <div id="jsScroll" className="scroll" onClick={scrollToTop}>
-        <FontAwesomeIcon icon={Pointer} className={cont.pointer} />
+      {/* ~~~~~ Scroll Button ~~~~~ */}
+      <div id="ScrollToTop" className="scroll">
+        <Scroll to="Header" smooth={true} duration={20}>
+          <img src={Arrow} className={cont.pointer} />
+        </Scroll>
       </div>
 
       {/* ~~~~~ TOP SECTION ~~~~~ */}
@@ -84,12 +71,7 @@ const Sugar: React.FC<Props> = props => {
 
               {/* ALBUM ORDER: 3RD EP */}
               <Grid item xs={6} md={6} className={grid.album_order}>
-                {/* <Typography variant="subtitle2" align='right' className={cont.album_order}>
-                  3rd EP
-                </Typography> */}
-                <div className={cont.album_order}>
-                  3rd EP
-                </div>
+                <p className={cont.album_order}> 3rd EP </p>
               </Grid>
 
             </Grid>
@@ -138,29 +120,37 @@ const Sugar: React.FC<Props> = props => {
               <Grid item xs={12} md={12} className='grid.info_song_list'>
                 <List className={cont.song_list}>
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
-                  {/* <ListItem button className={cont.song_list_button}> */}
-                  <ListItemLink href="#PulpFiction" className={cont.song_list_button}>
-                    <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
-                  </ListItemLink>
-                  {/* </ListItem> */}
+
+                  <Scroll to="PulpFiction" smooth={true} duration={20}>
+                    <ListItem className={cont.song_list_button}>
+                      <div className={cont.song_num}>1</div>　<div className={cont.song_title}>パルプフィクション</div>
+                    </ListItem>
+                  </Scroll>
+
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
-                  {/* <ListItem button className={cont.song_list_button}> */}
-                  <ListItemLink href="#OneThreeFour" className={cont.song_list_button}>
-                    <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
-                  </ListItemLink>
-                  {/* </ListItem> */}
+
+                  <Scroll to="OneThreeFour" smooth={true} duration={20}>
+                    <ListItem className={cont.song_list_button}>
+                      <div className={cont.song_num}>2</div>　<div className={cont.song_title}>134</div>
+                    </ListItem>
+                  </Scroll>
+
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
-                  {/* <ListItem button className={cont.song_list_button}> */}
-                  <ListItemLink href="#Summergreen" className={cont.song_list_button}>
-                    <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
-                  </ListItemLink>
-                  {/* </ListItem> */}
+
+                  <Scroll to="Summergreen" smooth={true} duration={20}>
+                    <ListItem className={cont.song_list_button}>
+                      <div className={cont.song_num}>3</div>　<div className={cont.song_title}>summergreen</div>
+                    </ListItem>
+                  </Scroll>
+
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
-                  {/* <ListItem button className={cont.song_list_button}> */}
-                  <ListItemLink href="#AmericanLemonade" className={cont.song_list_button}>
-                    <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
-                  </ListItemLink>
-                  {/* </ListItem> */}
+
+                  <Scroll to="AmericanLemonade" smooth={true} duration={20}>
+                    <ListItem className={cont.song_list_button}>
+                      <div className={cont.song_num}>4</div>　<div className={cont.song_title}>アメリカンレモネード</div>
+                    </ListItem>
+                  </Scroll>
+
                   <Divider className={cont.song_list_divider} variant='fullWidth' />
                 </List>
               </Grid>
@@ -211,10 +201,13 @@ const gridStyles = makeStyles((theme: Theme) =>
 
     top_root: {
       [theme.breakpoints.down('sm')]: {
-        marginTop: 60,
+        marginTop: 100,
       },
       [theme.breakpoints.up('md')]: {
-        marginTop: 120,
+        marginTop: 160,
+      },
+      [theme.breakpoints.up('lg')]: {
+        marginTop: 160,
       },
     },
     album_root: {
@@ -228,7 +221,7 @@ const gridStyles = makeStyles((theme: Theme) =>
       },
     },
     album_container: {
-      padding: '5%',
+      padding: 20,
     },
     album_artwork: {
     },
@@ -239,7 +232,7 @@ const gridStyles = makeStyles((theme: Theme) =>
     info_root: {
     },
     info_container: {
-      padding: '5%',
+      padding: 20,
     },
   })
 )
@@ -305,10 +298,9 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
     },
 
-
     // SCROLL ICON
     pointer: {
-      marginTop: 10,
+      marginTop: 0,
     },
 
     // LISTEN ALBUM

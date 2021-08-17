@@ -10,7 +10,7 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.header}>
+    <div className={classes.header} id='Header'>
       <AppBar position="fixed" className={classes.bar}>
         <img src={Logo} className={classes.logo} alt='logo'/>
       </AppBar>
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      height: '8vh',
+      // height: 60,
     },
     logo: {
       height: 37,
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 10,
     },
     bar: {
-      height: '10vh',
+      height: 60,
       background: "transparent",
       boxShadow: 'none'
     },

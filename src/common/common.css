@@ -16,7 +16,6 @@ body {
   padding: 0;
 }
 
-
 /* For: Scroll Button */
 html {
   scroll-behavior: smooth;
@@ -36,15 +35,10 @@ html {
   bottom: 30px;
   right: -80px;
   border-radius: 100%;
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgb(255, 255, 255) 0%,
-    rgb(255, 255, 255) 81.3%
-  );
   color: rgb(0, 0, 0);
   font-size: 20px;
   text-align: center;
-  box-shadow: 0 0 5px 0px #888;
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
   transition: 300ms;
 }
 

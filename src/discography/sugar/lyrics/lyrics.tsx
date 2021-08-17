@@ -260,7 +260,7 @@ const useStyles = makeStyles((theme: Theme) =>
     song_title: {
       paddingTop: 120,
       marginBottom: 50,
-      marginLeft: 10,
+      marginLeft: 0,
       flexGrow: 1,
       fontFamily: 'ヒラギノ角ゴシック',
       fontWeight: 'bold',
@@ -268,7 +268,7 @@ const useStyles = makeStyles((theme: Theme) =>
       color: "#0D1B22",
     },
     lyric: {
-      marginLeft: 10,
+      marginLeft: 0,
       lineHeight: 2,
       fontFamily: "ヒラギノ角ゴシック",
       fontSize: 15,
