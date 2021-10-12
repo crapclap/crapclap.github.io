@@ -5,12 +5,18 @@ import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-
 import Sugar_Artwork from '../../../src/discography/sugar/img/sugar-artwork.jpg'
 import SundayComesAgain_Artwork from '../../../src/discography/sunday-comes-again/img/sca-artwork.jpg'
 
+type Song = {
+  name: string,
+  id: string,
+}
+
 type Music = {
   title: string,
   order: string,
   artwork: string,
   page: string,
-  song: string[],
+  song: Song[],
+  // song_id: string[],
   link: {
     apple_music: string,
     spotyfy: string,
@@ -62,14 +68,26 @@ export const Sugar: Music = {
   artwork: Sugar_Artwork,
   page: 'sugar',
   song: [
-    'パルプ・フィクション',
-    '134',
-    'summergreen',
-    'アメリカンレモネード'
+    {
+      name: 'パルプ・フィクション',
+      id: 'PulpFiction',
+    },
+    {
+      name: '134',
+      id: 'OneThreeFour',
+    },
+    {
+      name: 'summergreen',
+      id: 'Summergreen',
+    },
+    {
+      name: 'アメリカンレモネード',
+      id: 'AmericanLemonade',
+    },
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/sugar-ep/1579303124?l=en&ls=1&app=music',
-    spotyfy: 'https://open.spotify.com/album/3Tp1ylJ9adp1yTJJF4kXQp?si=9dusisAxS6-cQGcfgf0_9Q&dl_branch=1'  ,
+    spotyfy: 'https://open.spotify.com/album/3Tp1ylJ9adp1yTJJF4kXQp?si=9dusisAxS6-cQGcfgf0_9Q&dl_branch=1',
   }
 }
 
@@ -79,7 +97,10 @@ export const Nostalgia: Music = {
   artwork: Nostalgia_Artwork,
   page: 'nostalgia',
   song: [
-    'ノスタルジー'
+    {
+      name: 'ノスタルジー',
+      id: 'Nostargia',
+    }
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/%E3%83%8E%E3%82%B9%E3%82%BF%E3%83%AB%E3%82%B8%E3%83%BC-single/1567346857?l=en',
@@ -93,7 +114,10 @@ export const Merry: Music = {
   artwork: Merry_Artwork,
   page: 'merry',
   song: [
-    'メリー'
+    {
+      name: 'メリー',
+      id: 'Merry',
+    }
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/%E3%83%A1%E3%83%AA%E3%83%BC-feat-mayu-from-nagie-lane-single/1545305521?l=en',
@@ -107,9 +131,18 @@ export const GoodLookingMan: Music = {
   artwork: GoodLookingMan_Artwork,
   page: 'good-looking-man',
   song: [
-    'milk tea',
-    '雨',
-    'the time',
+    {
+      name: 'milk tea',
+      id: 'MilkTea',
+    },
+    {
+      name: '雨',
+      id: 'Rain',
+    },
+    {
+      name: 'the time',
+      id: 'TheTime',
+    },
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/good-looking-man-single/1501479057?l=en',
@@ -124,9 +157,18 @@ export const SundayComesAgain: Music =
   artwork: SundayComesAgain_Artwork,
   page: 'sunday-comes-again',
   song: [
-    'Love me do',
-    'トワイライト・ラプソディー',
-    'アンラッキーストライク',
+    {
+      name: 'Love me do',
+      id: 'LoveMeDo',
+    },
+    {
+      name: 'トワイライト・ラプソディー',
+      id: 'TwilightRhapsody',
+    },
+    {
+      name: 'アンラッキーストライク',
+      id: 'UnluckyStrike',
+    },
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/sunday-comes-again-single/1449089520?l=en',

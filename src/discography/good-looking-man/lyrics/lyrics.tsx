@@ -1,79 +1,83 @@
 import React from 'react'
-import { 
-  Container, 
-  Typography 
+import {
+  Container,
+  Typography
 } from '@material-ui/core';
 
-import { 
-  createStyles,
-  makeStyles,
-  Theme
-} from '@material-ui/core/styles';
-
 import "../../../common/common.css"
+import { LyricStyles } from '../../_template/styles'
 
-export const PulpFiction = () => {
+export const MilkTea = () => {
 
-  const classes = useStyles();
+  const classes = LyricStyles();
 
   return (
     <div>
       <Container maxWidth="sm">
         <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          パルプフィクション
+          milk tea
         </Typography>
         <Typography variant="body2" align='left' className={classes.lyric}>
-          <div className={classes.lyric_block}>
-            タネも仕掛けもどこにもないのに<br />
-            雲があまりにも早く進んでしまうから<br />
-            日が暮れる様を気にも留めずに<br />
-            目をつむっていた<br />
-          </div>
-          <div className={classes.lyric_block}>
-            駅前で甘い言葉<br />
-            少しだけランデブー<br />
-            やわらかな風の中<br />
-            煙を巻いて飛んで恋をする<br />
-            冷めたミルクコーヒー<br />
-            甘くない現実に肩落とした<br />
-          </div>
-          <div className={classes.lyric_block}>
-            夏の匂いがして<br />
-            少し焦ったりして<br />
-            安っぽいキスに飲まれて<br />
-            笑っていた<br />
-          </div>
-          <div className={classes.lyric_block}>
-            確かめたいことはいつも<br />
-            知りたくないことばかりだから<br />
-            夢の中で笑えればいいか<br />
-            三文小説の日々<br />
-          </div>
 
           <div className={classes.lyric_block}>
-            伸びすぎた陽は<br />
-            君の長い髪を照らして<br />
-            嘘みたいにクソみたいな<br />
-            セリフ吐いて溶ける時間に<br />
-            抱きしめたら大きくなってた希望に<br />
-            心奪われた<br />
+            夢の中より甘い そしてちょっと恥ずかしい<br />
+            君はこんな瞬間に何を想うの<br />
+            深い話 後回し とりあえず今は<br />
+            溺れされてほしいだけ<br />
+            光と闇の間 するり入り込めば<br />
+            ほらね 完成まで愛してくれるだけでいい<br />
+            ぬるくなったミルクティー<br />
+            おやすみ 目を閉じてジャーニー<br />
+            飲みかけは明日の朝で<br />
           </div>
           <div className={classes.lyric_block}>
-            とにかくもう眠りにつこう<br />
-            明日には忘れるんだから<br />
-            もうちょっと浸りたいけど仕方ないな<br />
-            三文小説の日々<br />
+            甘い甘い蜜を吸いすぎたら<br />
+            もう何処へも戻れなくなるけど<br />
+            夢見心地のままで居たいから<br />
+            贅沢な罠を仕掛けて<br />
           </div>
           <div className={classes.lyric_block}>
-            味わうほどのものではない<br />
-            辛々逃げ込んだ秘密の部屋<br />
-            映し出された記憶のキネマ<br />
+            トリコにさせてくれ<br />
+            後引くその笑顔が<br />
+            まだ誰のものでもないと信じていたい<br />
+            ぬるく伸びた夜には甘ったるい口づけの後<br />
+            高鳴る鼓動とミルクティー<br />
           </div>
           <div className={classes.lyric_block}>
-            抱きしめたい<br />
-            通り過ぎてから気づく味気ない良さに<br />
-            閃いて消えるからたまらないね<br />
-            三文小説の日々<br />
+            終わりの歌聞こえた 午前0時トーキョーシティ<br />
+            終電の一つ前で帰るんでしょ？<br />
+            「実はまだ飲み足りない」 言えない 代わりのサヨナラが<br />
+            口の中 ほろ苦く残ってた<br />
+          </div>
+          <div className={classes.lyric_block}>
+            トリコにさせてくれ<br />
+            止まらず溢れ出るどんな言葉も<br />
+            一度きりのものじゃないと確かめたい<br />
+            ゆるく溶けた日々には野暮ったい口づけの後<br />
+            乾いた身体とミルクティー<br />
+          </div>
+          <div className={classes.lyric_block}>
+            酸いも甘いも流し込めば<br />
+            なにも見えない なにも聞こえない<br />
+            エレベーターホールで目をつむるから<br />
+            ねえ 気づいて<br />
+          </div>
+          <div className={classes.lyric_block}>
+            トリコにさせられて<br />
+            飽きるほど触れた感情の器から<br />
+            こぼれ落ちたいくつかをかき集めて<br />
+            繋いだ手の中に無理矢理押し込んでやる<br />
+            そしたらどんな顔するかな<br />
+          </div>
+          <div className={classes.lyric_block}>
+            トリコにさせられた<br />
+            後引く その笑顔に<br />
+            もう病みつきになっちゃって 仕方ないな<br />
+            黒と赤の 今日が明日になる少しだけ前に<br />
+            濡れた笑顔とミルクティー<br />
+          </div>
+          <div className={classes.lyric_block}>
+            飲みかけは明日の朝で<br />
           </div>
         </Typography>
       </Container>
@@ -81,60 +85,59 @@ export const PulpFiction = () => {
   );
 };
 
-export const OneThreeFour = () => {
+export const Rain = () => {
 
-  const classes = useStyles();
+  const classes = LyricStyles();
 
   return (
     <div>
       <Container maxWidth="sm">
         <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          134
+          雨
         </Typography>
         <Typography variant="body2" align='left' className={classes.lyric}>
+
           <div className={classes.lyric_block}>
-            思い出のあの島は<br />
-            今じゃただの岩だ<br />
-            さざなみに揺れて漂流<br />
-            とこしえの波音の彼方<br />
-            人は疎ら<br />
-            ただ風に吹かれている<br />
+            うだるような暑さのあとは雨の匂い<br />
+            夜が来れば終わる魔法<br />
+            コーヒーでも飲みながらと笑ったふりをして<br />
+            誘う右腕は君のもの<br />
           </div>
           <div className={classes.lyric_block}>
-            赤くなった夕暮れの<br />
-            香りまで覚えていた<br />
-            いつまでも続いている気がした<br />
+            雨はほんとに好きだ 嘘ついてこっそり濡れた<br />
+            傘から出る左手は心を映した<br />
+            寒くなったらいつか 僕の部屋においでよ<br />
+            改札抜ける君見送った<br />
           </div>
           <div className={classes.lyric_block}>
-            揺れる海岸線と<br />
-            空を撫ぜるセレナーデ<br />
-            まだ旧くない頭の中<br />
-            風来者の潮風に誘われて<br />
-            目と目が合った時の事<br />
-            背中が合った時の事<br />
+            身ぶるいをしながら 足早に過ぎ去る日々<br />
+            冷めた風が連れてきた君<br />
+            2度と離さないぜとか綺麗なことばかり<br />
+            誘うバカな悪魔の声<br />
           </div>
           <div className={classes.lyric_block}>
-            すべからく時は流れる<br />
-            ノロマを乗せ<br />
-            どこまでも進んでいく<br />
+            身ぶるいをしながら 足早に過ぎ去る日々<br />
+            冷めた風が連れてきた君<br />
+            2度と離さないぜとか綺麗なことばかり<br />
+            誘うバカな悪魔の声<br />
           </div>
           <div className={classes.lyric_block}>
-            伸びすぎた陽の憂鬱も<br />
-            止めどない影法師も<br />
-            いつまでも続きそうだったんだ<br />
+            黒いニットのマフラー 微笑みに別れ感じた<br />
+            シオン色めく雨粒は心を濡らした<br />
+            黒く長い髪が風になびく頃には<br />
+            この街に白い雪が降る<br />
           </div>
           <div className={classes.lyric_block}>
-            揺れる海岸線の波は跡を消さないで<br />
-            寄せては返す言葉の先<br />
-            風来者の潮風に誘われて<br />
-            また暗んでいく空<br />
+            僕の肩に降り積もってく<br />
+            この手には秘密の言葉を隠して<br />
+            指の先に伝わるのは 温もりの街<br />
+            これでもうさよならだ<br />
           </div>
           <div className={classes.lyric_block}>
-            揺れる海岸線を終わりまで瞬いて<br />
-            まだ旧くないあの日のまま<br />
-            エンドロール<br />
-            ガラス玉の目に映さないで<br />
-            また眩んでいくから<br />
+            雨はほんとに好きだ 嘘ついてこっそり濡れた<br />
+            傘から出る左手は心を映した<br />
+            寒くなったらいつか 僕の部屋においでよ<br />
+            いつまでも夢見ていよう<br />
           </div>
         </Typography>
       </Container>
@@ -142,154 +145,61 @@ export const OneThreeFour = () => {
   );
 }
 
-export const Summergreen = () => {
+export const TheTime = () => {
 
-  const classes = useStyles();
+  const classes = LyricStyles();
 
   return (
     <div>
       <Container maxWidth="sm">
         <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          summergreen
+          the time
         </Typography>
         <Typography variant="body2" align='left' className={classes.lyric}>
+
           <div className={classes.lyric_block}>
-            まだ夢の中にいるみたいな<br />
-            揺れたけむりが空に溶け出した<br />
-            速くなる秒針眺めて<br />
-            同じ様に見えてるかな<br />
+            溢れ出したサンライズ<br />
+            時計仕掛けニューデイズ<br />
+            惹かれ合ったボーイズアンドガールズ 夢の中<br />
+            止まらないよワンモアタイム<br />
+            鳴り響くアラームに<br />
+            縋るようにワンモアチャンス<br />
+            ぬるくなるその前に<br />
           </div>
           <div className={classes.lyric_block}>
-            いつになく暑い夜の<br />
-            身体に張り付く湿り気のある膜<br />
-            「たぶん」という便利な言葉で<br />
-            いつだって空を飛んでる<br />
+            「もう行かないで」って言ってほしくて<br />
+            シャンプーの匂いが弾けたら<br />
           </div>
           <div className={classes.lyric_block}>
-            言葉は喉元伝って落ちた<br />
-            冷めたアスファルトにへばりつく<br />
-            意味のない視線は首筋<br />
-            どんな風に見えてるかな<br />
+            i love you baby<br />
+            とても足りないみたいだよ<br />
+            i love you baby<br />
+            いつの日もマニーもハニーも<br />
+            愛は止められなくなる<br />
+            もうちょっとこうしていたいのに<br />
           </div>
           <div className={classes.lyric_block}>
-            鳴り止まぬ高鳴りを<br />
-            抑えるではなく身を委ねてみたら<br />
-            腑抜けたこの夜にお似合いの<br />
-            星色の鳥になれる<br />
+            履き違えた才能<br />
+            抱きしめてよブルースカイ<br />
+            忘れちゃったスウィーティータイム<br />
+            夢の中へ<br />
           </div>
           <div className={classes.lyric_block}>
-            色のない泡の中へ飛び込んだ<br />
-            遠くに広がるその胸の温度<br />
+            何にも要らないな こんな具合で<br />
+            シャンプーの匂いが弾けてさ<br />
+            こんな時間が ずっと続けばいいのに<br />
+            もう時間だ<br />
           </div>
           <div className={classes.lyric_block}>
-            土砂降りの雨の中<br />
-            自然と近づく距離が愛しくて<br />
-            Tシャツと肌の間には<br />
-            この夜の想い出<br />
-          </div>
-          <div className={classes.lyric_block}>
-            くだらない1シーンも<br />
-            いつしか物思うとは露知らずに<br />
-            鼻歌まじり帰り道は<br />
-            夏の夜の甘い記憶<br />
+            i love you baby<br />
+            とても足りなすぎるから<br />
+            i love you baby<br />
+            雨の日も 空が青い日も<br />
+            ラブアンドピースで行こう<br />
+            ところでさ、もうずっとこうしていたいよな<br />
           </div>
         </Typography>
       </Container>
     </div>
   );
 }
-
-export const AmericanLemonade = () => {
-
-  const classes = useStyles();
-
-  return (
-    <div>
-      <Container maxWidth="sm">
-        <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          アメリカンレモネード
-        </Typography>
-        <Typography variant="body2" align='left' className={classes.lyric}>
-          <div className={classes.lyric_block}>
-            眠れない夜と踊って靴を履いて<br />
-            丸くない月に何度も問いかけては<br />
-          </div>
-          <div className={classes.lyric_block}>
-            俯いた<br />
-            そこにあったどんな景色より<br />
-            輝いていた<br />
-            永遠に幻の<br />
-          </div>
-          <div className={classes.lyric_block}>
-            マチルダ<br />
-            2人は魔法のように消えてしまうけど<br />
-            飾らない笑顔で満たしてくれたから<br />
-            味気ない光のような儚さで<br />
-            また会える気がするそんな気がしている<br />
-          </div>
-          <div className={classes.lyric_block}>
-            見つけたい<br />
-            線路越しの駅のホーム<br />
-          </div>
-          <div className={classes.lyric_block}>
-            サヨナラとまたねの丁度良いところ<br />
-            摘み取れていたら<br />
-            とりあえずやり過ごせたな<br />
-          </div>
-          <div className={classes.lyric_block}>
-            永遠に幻の<br />
-          </div>
-          <div className={classes.lyric_block}>
-            マチルダ<br />
-            スカートの裾が揺れる季節の頃<br />
-            飾らない笑顔に満たされていたから<br />
-            分からないままで終わりが来れば<br />
-            ああ<br />
-            マチルダ<br />
-            マチルダ<br />
-          </div>
-        </Typography>
-      </Container>
-    </div>
-  );
-}
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    song_title: {
-      paddingTop: 120,
-      marginBottom: 50,
-      marginLeft: 0,
-      flexGrow: 1,
-      fontFamily: 'ヒラギノ角ゴシック',
-      fontSize: 25,
-      // fontWeight: 500,
-      // color: "#0D1B22",
-      [theme.breakpoints.down('sm')]: {
-        fontWeight: 600,
-        color: '#383D40',
-      },
-      [theme.breakpoints.up('md')]: {
-        fontWeight: 500,
-        color: '#0D1B22',
-      },
-      [theme.breakpoints.up('lg')]: {
-        fontWeight: 500,
-        color: '#0D1B22',
-      },
-    },
-    lyric: {
-      marginLeft: 0,
-      lineHeight: 2,
-      fontFamily: "ヒラギノ角ゴシック",
-      fontSize: 15,
-      color: "#0D1B22",
-    },
-    lyric_block: {
-      marginBottom: 36,
-    }
-  }),
-);

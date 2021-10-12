@@ -104,7 +104,7 @@ const Top: React.FC = () => {
                   {MusicList.map((music, index: number) => {
                     return (
                       <li className={cont.music_item}>
-                        <Link to={'discography/' + music.page}>
+                        <Link to={'discography/' + music.page} className={cont.music_link}>
                           <img src={music.artwork} className={cont.music_artwork} alt='artwork' />
                           <Typography align='left' className={cont.music_desc_title}> {music.title} </Typography>
                           <Typography align='left' className={cont.music_desc_order}> {music.order} </Typography>
@@ -226,16 +226,30 @@ const useStyles = makeStyles((theme: Theme) =>
       overflowX: 'auto',
       whiteSpace: 'nowrap',
     },
+    music_link: {
+      textDecoration: 'none',
+      '&:focus, &:hover, &:visited, &:link, &:active': {
+        textDecoration: 'none',
+      },
+      // textDecorationLine: 'none',
+      // textDecorationColor: 'black',
+    },
     music_item: {
       display: 'inline-block',
       marginRight: '30px',
     },
     music_artwork: {
       width: '250px',
-      
+      '&:hover': {
+        width: '200px',
+        margin: '12.5px',
+      },
+
     },
     music_desc_title: {
-
+      fontFamily: 'Ariel',
+      fontWeight: 'bold',
+      fontSize: 15,
     },
     music_desc_order: {
 

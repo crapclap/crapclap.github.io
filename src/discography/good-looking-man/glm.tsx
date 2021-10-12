@@ -11,16 +11,15 @@ import {
 } from '@material-ui/core';
 
 import {
-  PulpFiction,
-  OneThreeFour,
-  Summergreen,
-  AmericanLemonade
+  MilkTea,
+  Rain,
+  TheTime
 } from './lyrics/lyrics'
 
 import {
   ContentStyles,
   GridStyles
-} from '../_template/style'
+} from '../_template/styles'
 
 import "../../common/common.css"
 import Artwork from './img/glm-artwork.jpg'
@@ -130,9 +129,9 @@ const GoodLookingMan = () => {
                       <>
                         <Divider className={cont.song_list_divider} variant='fullWidth' />
 
-                        <Scroll to='' smooth={true} duration={100}>
+                        <Scroll to={song.id} smooth={true} duration={100}>
                           <ListItem className={cont.song_list_button}>
-                            <div className={cont.song_num}>{index}</div>　<div className={cont.song_title}>{song}</div>
+                            <div className={cont.song_num}>{index}</div>　<div className={cont.song_title}>{song.name}</div>
                           </ListItem>
                         </Scroll>
                       </>
@@ -152,17 +151,14 @@ const GoodLookingMan = () => {
       {/* LYRIC AREA */}
       <Container maxWidth='sm'>
         <div className='lyric_area'>
-          <div id='PulpFiction'>
-            <PulpFiction />
+          <div id='MilkTea'>
+            <MilkTea />
           </div>
-          <div id='OneThreeFour'>
-            <OneThreeFour />
+          <div id='Rain'>
+            <Rain />
           </div>
-          <div id='Summergreen'>
-            <Summergreen />
-          </div>
-          <div id='AmericanLemonade'>
-            <AmericanLemonade />
+          <div id='TheTime'>
+            <TheTime />
           </div>
         </div>
 

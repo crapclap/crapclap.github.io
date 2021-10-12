@@ -186,3 +186,43 @@ export const ContentStyles = makeStyles((theme: Theme) =>
     },
   })
 )
+
+export const LyricStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+    },
+    song_title: {
+      paddingTop: 120,
+      marginBottom: 50,
+      marginLeft: 0,
+      flexGrow: 1,
+      fontFamily: 'ヒラギノ角ゴシック',
+      fontSize: 25,
+      // fontWeight: 500,
+      // color: "#0D1B22",
+      [theme.breakpoints.down('sm')]: {
+        fontWeight: 600,
+        color: '#383D40',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontWeight: 500,
+        color: '#0D1B22',
+      },
+    },
+    lyric: {
+      marginLeft: 0,
+      lineHeight: 2,
+      fontFamily: "ヒラギノ角ゴシック",
+      fontSize: 15,
+      color: "#0D1B22",
+    },
+    lyric_block: {
+      marginBottom: 36,
+    }
+  }),
+);

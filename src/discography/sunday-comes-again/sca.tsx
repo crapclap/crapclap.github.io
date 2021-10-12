@@ -2,14 +2,6 @@ import React from 'react'
 import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
-import {
-  PulpFiction,
-  OneThreeFour,
-  Summergreen,
-  AmericanLemonade
-} from './lyrics/lyrics'
 
 import {
   Container,
@@ -19,19 +11,24 @@ import {
 } from '@material-ui/core';
 
 import {
+  LoveMeDo,
+  TwilightRhapsody,
+  UnluckyStrike
+} from './lyrics/lyrics'
+
+import {
   ContentStyles,
   GridStyles
 } from '../_template/styles'
 
 import "../../common/common.css"
-import Artwork from './img/sugar-artwork.jpg'
-import AlbumLogo from './img/sugar-logo.svg'
+import Artwork from './img/sca-artwork.jpg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'
 import SpotifyLogo from '../../common/img/spotify.png'
 import Arrow from '../../common/img/arrow.svg'
-import { Sugar as Information } from '../../common/list/list';
+import { SundayComesAgain as Information } from '../../common/list/list';
 
-const Sugar = () => {
+const SundayComesAgain = () => {
 
   const cont = ContentStyles()
   const grid = GridStyles()
@@ -51,7 +48,7 @@ const Sugar = () => {
       {/* ~~~~~ Scroll Button ~~~~~ */}
       <div id="ScrollToTop" className="scroll">
         <Scroll to="Header" smooth={true} duration={100}>
-          <img src={Arrow} className={cont.pointer} alt='arrow'/>
+          <img src={Arrow} className={cont.pointer} alt='arrow' />
         </Scroll>
       </div>
 
@@ -154,17 +151,14 @@ const Sugar = () => {
       {/* LYRIC AREA */}
       <Container maxWidth='sm'>
         <div className='lyric_area'>
-          <div id='PulpFiction'>
-            <PulpFiction />
+          <div id='LoveMeDo'>
+            <LoveMeDo />
           </div>
-          <div id='OneThreeFour'>
-            <OneThreeFour />
+          <div id='TwilightRhapsody'>
+            <TwilightRhapsody />
           </div>
-          <div id='Summergreen'>
-            <Summergreen />
-          </div>
-          <div id='AmericanLemonade'>
-            <AmericanLemonade />
+          <div id='UnluckyStrike'>
+            <UnluckyStrike />
           </div>
         </div>
 
@@ -174,7 +168,6 @@ const Sugar = () => {
             <Grid item xs={6} />
             <Grid item xs={6}>
               <div className={cont.bottom_section}>
-                <img src={AlbumLogo} alt='album_logo' className={cont.bottom_logo} />
               </div>
             </Grid>
           </Grid>
@@ -185,4 +178,4 @@ const Sugar = () => {
   )
 }
 
-export default Sugar
+export default SundayComesAgain
