@@ -10,6 +10,8 @@ import './App.css'
 import Header from './common/header/header'
 import Footer from './common/footer/footer'
 import Top from './top/top'
+import AutoScrollToTop from './common/function/autoScrollToTop.jsx'
+
 import Discography from './discography/discography'
 
 import GoodLookingMan from './discography/good-looking-man/glm'
@@ -25,6 +27,7 @@ function App() {
     <div className="App">
       <Router  basename={process.env.PUBLIC_URL}>
         <div>
+        <AutoScrollToTop />
           <Header />
           <Switch>
             <Route exact path="/" component={Top} />

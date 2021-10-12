@@ -29,35 +29,46 @@ export const LoveMeDo = () => {
             だらだらだらだら渋滞だ会話のペース<br />
             どっちが先に折れるかシーソーゲーム<br />
             好きだよなんて言えるはずもない<br />
-            そんなハードデイズナイトいつだってこうなんだ<br />
+            そんなハードデイズナイト<br />
+            いつだってこうなんだ<br />
           </div>
           <div className={classes.lyric_block}>
             目を見て話せないのは<br />
             そこに恋が生まれた証だね<br />
           </div>
           <div className={classes.lyric_block}>
-            ああ どうしても君には言えないなこんなこと<br />
-            言わなきゃなにも始まんないのはわかってんだよ<br />
-            ああ 愛してる<br />
-            こんな5文字が言えない弱虫 故にラブミードゥー<br />
+            ああ<br />
+            どうしても君には言えないなこんなこと<br />
+            言わなきゃなにも始まんないのは<br />
+            わかってんだよ<br />
+            ああ　愛してる<br />
+            こんな5文字が言えない弱虫<br />
+            故にラブミードゥー<br />
           </div>
           <div className={classes.lyric_block}>
-            くるくるくるくるもうだめだ君の目見れないな<br />
+            くるくるくるくるもうだめだ<br />
+            君の目見れないな<br />
             僕の中に潜む恋の魔物騒いで<br />
-            I wanna be your man言えるはずもない<br />
-            ラブラブラブ 抱きしめてキスしたいのに<br />
+            I wanna be your man<br />
+            言えるはずもない<br />
+            ラブラブラブ<br />
+            抱きしめてキスしたいのに<br />
           </div>
           <div className={classes.lyric_block}>
-            僕の全てを君に捧げてみたらどうなるんだろうな<br />
+            僕の全てを君に捧げてみたら<br />
+            どうなるんだろうな<br />
             週に8日あれば君に好きと言えるのに<br />
             いつまでだって言えるはずもないのに<br />
             愛が金で買えたなら<br />
           </div>
           <div className={classes.lyric_block}>
-            ああ どうしても君には言えないなこんなこと<br />
-            言わなきゃなにも始まんないのはわかってんだよ<br />
-            ああ 愛してる<br />
-            こんな5文字が言えない弱虫 故にラブミードゥー<br />
+            ああ<br />
+            どうしても君には言えないなこんなこと<br />
+            言わなきゃなにも始まんないのは<br />
+            わかってんだよ<br />
+            ああ　愛してる<br />
+            こんな5文字が言えない弱虫<br />
+            故にラブミードゥー<br />
           </div>
           <div className={classes.lyric_block}>
             ゆるい坂を下る<br />
@@ -80,66 +91,6 @@ export const TwilightRhapsody = () => {
       <Container maxWidth="sm">
         <Typography variant="h6" align='left' display="block" className={classes.song_title}>
           トワイライト・ラプソディー
-        </Typography>
-        <Typography variant="body2" align='left' className={classes.lyric}>
-
-          <div className={classes.lyric_block}>
-            うだるような暑さのあとは雨の匂い<br />
-            夜が来れば終わる魔法<br />
-            コーヒーでも飲みながらと笑ったふりをして<br />
-            誘う右腕は君のもの<br />
-          </div>
-          <div className={classes.lyric_block}>
-            雨はほんとに好きだ 嘘ついてこっそり濡れた<br />
-            傘から出る左手は心を映した<br />
-            寒くなったらいつか 僕の部屋においでよ<br />
-            改札抜ける君見送った<br />
-          </div>
-          <div className={classes.lyric_block}>
-            身ぶるいをしながら 足早に過ぎ去る日々<br />
-            冷めた風が連れてきた君<br />
-            2度と離さないぜとか綺麗なことばかり<br />
-            誘うバカな悪魔の声<br />
-          </div>
-          <div className={classes.lyric_block}>
-            身ぶるいをしながら 足早に過ぎ去る日々<br />
-            冷めた風が連れてきた君<br />
-            2度と離さないぜとか綺麗なことばかり<br />
-            誘うバカな悪魔の声<br />
-          </div>
-          <div className={classes.lyric_block}>
-            黒いニットのマフラー 微笑みに別れ感じた<br />
-            シオン色めく雨粒は心を濡らした<br />
-            黒く長い髪が風になびく頃には<br />
-            この街に白い雪が降る<br />
-          </div>
-          <div className={classes.lyric_block}>
-            僕の肩に降り積もってく<br />
-            この手には秘密の言葉を隠して<br />
-            指の先に伝わるのは 温もりの街<br />
-            これでもうさよならだ<br />
-          </div>
-          <div className={classes.lyric_block}>
-            雨はほんとに好きだ 嘘ついてこっそり濡れた<br />
-            傘から出る左手は心を映した<br />
-            寒くなったらいつか 僕の部屋においでよ<br />
-            いつまでも夢見ていよう<br />
-          </div>
-        </Typography>
-      </Container>
-    </div>
-  );
-}
-
-export const UnluckyStrike = () => {
-
-  const classes = LyricStyles();
-
-  return (
-    <div>
-      <Container maxWidth="sm">
-        <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          アンラッキーストライク
         </Typography>
         <Typography variant="body2" align='left' className={classes.lyric}>
 
@@ -185,7 +136,8 @@ export const UnluckyStrike = () => {
           <div className={classes.lyric_block}>
             ダウンタウンでキスをして<br />
             いつまでも変わらずに<br />
-            あの日のままでなんて恥ずかしくて言えやしないよな<br />
+            あの日のままでなんて<br />
+            恥ずかしくて言えやしないよな<br />
             遠ざかる でも消えない 夏のランデブー<br />
             抱きしめて眠る夜<br />
           </div>
@@ -204,6 +156,66 @@ export const UnluckyStrike = () => {
           </div>
           <div className={classes.lyric_block}>
             変わらずそこにいてね<br />
+          </div>
+        </Typography>
+      </Container>
+    </div>
+  );
+}
+
+export const UnluckyStrike = () => {
+
+  const classes = LyricStyles();
+
+  return (
+    <div>
+      <Container maxWidth="sm">
+        <Typography variant="h6" align='left' display="block" className={classes.song_title}>
+          アンラッキーストライク
+        </Typography>
+        <Typography variant="body2" align='left' className={classes.lyric}>
+
+          <div className={classes.lyric_block}>
+          本日1本目はベランダで<br />
+          起き抜けの身体を起こすためのもの<br />
+          1日が始まる<br />
+          </div>
+          <div className={classes.lyric_block}>
+          誰か想いながら吸う2本目はほろ苦く<br />
+          やけに青い空は日曜<br />
+          心雨模様<br />
+          </div>
+          <div className={classes.lyric_block}>
+          ふいに火をつけた3本目<br />
+          懐かしい街を歩く<br />
+          あの日気をつけた坂歩けば 呼吸も速くなる<br />
+          </div>
+          <div className={classes.lyric_block}>
+          誰か想って4本目<br />
+          コンビニのスモーキングエリア<br />
+          新しく出来たらしいな 研修中の店員さん<br />
+          </div>
+          <div className={classes.lyric_block}>
+          変わってしまったな<br />
+          気づいたらスーツなんか着て<br />
+          思い出し笑いの１つもあればいいな<br />
+          まだまだ歩けるかい<br />
+          まだ火をつけたばかり<br />
+          あと何本吸ったら君に会えるかな<br />
+          </div>
+          <div className={classes.lyric_block}>
+          そりゃラークに過ごせればいいけど<br />
+          クールな目してピースな言葉<br />
+          最低最高な瞬間のハイライト<br />
+          もう一度見れたりしないかな<br />
+          </div>
+          <div className={classes.lyric_block}>
+          夜に照らされ5本目の煙よ月まで届け<br />
+          もう優しくしなくていいよ<br />
+          そのまま消えてよ<br />
+          誰か想いながら吸い殻になり灰皿へGO<br />
+          僕は生きている<br />
+          たばこを吸っている<br />
           </div>
         </Typography>
       </Container>

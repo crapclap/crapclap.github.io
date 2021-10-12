@@ -2,14 +2,6 @@ import React from 'react'
 import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
-import {
-  PulpFiction,
-  OneThreeFour,
-  Summergreen,
-  AmericanLemonade
-} from './lyrics/lyrics'
 
 import {
   Container,
@@ -22,6 +14,13 @@ import {
   ContentStyles,
   GridStyles
 } from '../_template/styles'
+
+import {
+  PulpFiction,
+  OneThreeFour,
+  Summergreen,
+  AmericanLemonade
+} from './lyrics/lyrics'
 
 import "../../common/common.css"
 import Artwork from './img/sugar-artwork.jpg'
@@ -51,7 +50,7 @@ const Sugar = () => {
       {/* ~~~~~ Scroll Button ~~~~~ */}
       <div id="ScrollToTop" className="scroll">
         <Scroll to="Header" smooth={true} duration={100}>
-          <img src={Arrow} className={cont.pointer} alt='arrow'/>
+          <img src={Arrow} className={cont.pointer} alt='arrow' />
         </Scroll>
       </div>
 

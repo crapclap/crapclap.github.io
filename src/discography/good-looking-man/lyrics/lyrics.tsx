@@ -44,9 +44,11 @@ export const MilkTea = () => {
             高鳴る鼓動とミルクティー<br />
           </div>
           <div className={classes.lyric_block}>
-            終わりの歌聞こえた 午前0時トーキョーシティ<br />
+            終わりの歌聞こえた<br />
+            午前0時トーキョーシティ<br />
             終電の一つ前で帰るんでしょ？<br />
-            「実はまだ飲み足りない」 言えない 代わりのサヨナラが<br />
+            「実はまだ飲み足りない」言えない<br />
+            代わりのサヨナラが<br />
             口の中 ほろ苦く残ってた<br />
           </div>
           <div className={classes.lyric_block}>

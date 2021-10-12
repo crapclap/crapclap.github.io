@@ -22,7 +22,7 @@ import Artwork from './img/nostalgia-artwork.jpg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'
 import SpotifyLogo from '../../common/img/spotify.png'
 import Arrow from '../../common/img/arrow.svg'
-import { Merry as Information } from '../../common/list/list';
+import { Nostalgia as Information } from '../../common/list/list';
 
 const Nostalgia = () => {
 

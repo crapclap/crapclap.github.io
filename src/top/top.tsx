@@ -70,6 +70,8 @@ const Top: React.FC = () => {
       <Container maxWidth='xl'>
         <Grid container spacing={0} className={grid.top_root}>
 
+          <div id="ScrollToTop" />
+
           <Grid item xs={12} md={6} className={grid.meta_root}>
             <img src={DynamicImg} className={cont.dynamic_img} alt='dynamicImg' />
           </Grid>
