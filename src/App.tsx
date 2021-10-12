@@ -7,11 +7,11 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import Header from './common/header/header'
-import Footer from './common/footer/footer'
-import Top from './top/top'
 import AutoScrollToTop from './common/function/autoScrollToTop.jsx'
+import Footer from './common/footer/footer'
+import Header from './common/header/header'
 
+import Top from './top/top'
 import Discography from './discography/discography'
 
 import GoodLookingMan from './discography/good-looking-man/glm'

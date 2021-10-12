@@ -99,7 +99,7 @@ export const Nostalgia: Music = {
   song: [
     {
       name: 'ノスタルジー',
-      id: 'Nostargia',
+      id: 'Nostalgia',
     }
   ],
   link: {

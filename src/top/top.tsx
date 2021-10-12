@@ -190,6 +190,7 @@ const useStyles = makeStyles((theme: Theme) =>
     video_list: {
       overflowX: 'auto',
       whiteSpace: 'nowrap',
+      height: '240px',
     },
     video_embed: {
       borderTopLeftRadius: '18px',
