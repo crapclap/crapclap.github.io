@@ -1,6 +1,6 @@
 import React from "react";
 import "../common.css"
-import Logo from "../../img/logo.svg"
+import Logo from "../img/logo.svg"
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { AppBar} from '@material-ui/core';

@@ -18,12 +18,13 @@ import {
   Typography
 } from '@material-ui/core';
 
-import Artwork from '../../img/sugar-artwork.jpg'
-import AlbumLogo from '../../img/sugar-logo.svg'
-import AppleMusicLogo from '../../img/apple-music.svg'
-import SpotifyLogo from '../../img/spotify.png'
-import Arrow from '../../img/arrow.svg'
 import "../../common/common.css"
+// import "../discography.css"
+import Artwork from './img/sugar-artwork.jpg'
+import AlbumLogo from './img/sugar-logo.svg'
+import AppleMusicLogo from '../../common/img/apple-music.svg'
+import SpotifyLogo from '../../common/img/spotify.png'
+import Arrow from '../../common/img/arrow.svg'
 
 const Sugar = () => {
 
@@ -45,7 +46,7 @@ const Sugar = () => {
       {/* ~~~~~ Scroll Button ~~~~~ */}
       <div id="ScrollToTop" className="scroll">
         <Scroll to="Header" smooth={true} duration={100}>
-          <img src={Arrow} className={cont.pointer} />
+          <img src={Arrow} className={cont.pointer} alt='arrow'/>
         </Scroll>
       </div>
 
@@ -102,7 +103,7 @@ const Sugar = () => {
               {/* SUBSCRIPTION: SPOTIFY */}
               <Grid item xs={6} md={6} className={grid.info_sub_spotify}>
                 <div className={cont.info_sub_bg}>
-                  <a href='https://open.spotify.com/artist/1qefytAD4qHuTqxo2iw6sD?si=SNQVLhymSeKPNMvxnhAxDA&dl_branch=1'>
+                  <a href='https://open.spotify.com/album/3Tp1ylJ9adp1yTJJF4kXQp?si=9dusisAxS6-cQGcfgf0_9Q&dl_branch=1'>
                     <img src={SpotifyLogo} className={cont.info_sub_spotify_logo} alt='info_sub_spotify_logo' />
                   </a>
                 </div>
@@ -236,13 +237,9 @@ const gridStyles = makeStyles((theme: Theme) =>
     },
     info_sub_apple: {
       padding: 0,
-      // width: 150,
-      // height: 100,
     },
     info_sub_spotify: {
       padding: 0,
-      // width: 150,
-      // height: 100,
     }
   })
 )

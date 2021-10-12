@@ -2,24 +2,15 @@
 
 #root {
   height: 100%;
-  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-    "Meiryo", "sans-serif";
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
 }
 
-body {
-  position: relative;
-  height: 100%;
-  background-image: url("../img/grain-bg.jpeg");
-  background-repeat: repeat;
-  background-size: 15%;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* For: Scroll Button */
 html {
   scroll-behavior: smooth;
+  background-image: url("../common/img/grain-bg.jpeg");
+  background-repeat: repeat;
+  background-size: 15%;
 }
 
 @media (prefers-reduced-motion: reduce) {

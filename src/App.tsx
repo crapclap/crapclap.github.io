@@ -2,7 +2,6 @@ import React from 'react'
 import smoothscroll from 'smoothscroll-polyfill';
 import { 
   BrowserRouter as Router,
-  // HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
@@ -12,6 +11,8 @@ import Header from './common/header/header'
 import Footer from './common/footer/footer'
 import Top from './top/top'
 import Discography from './discography/discography'
+
+import GoodLookingMan from './discography/good-looking-man/glm'
 import Sugar from './discography/sugar/sugar'
 
 smoothscroll.polyfill();
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/" component={Top} />
             <Route exact path="/crapclap" component={Top} />
             <Route exact path="/discography" component={Discography} />
+            <Route exact path="/discography/good-looking-man" component={GoodLookingMan} />
             <Route exact path="/discography/sugar" component={Sugar} />
           </Switch>
           <Footer />
