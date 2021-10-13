@@ -1,28 +1,13 @@
-import React from 'react'
+import "../../common/common.css"
+
 import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import { Container, Divider, Grid, Typography } from '@material-ui/core';
 
-import {
-  Container,
-  Divider,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { ContentStyles, GridStyles } from '../_template/styles'
+import { PulpFiction, OneThreeFour, Summergreen, AmericanLemonade } from './lyrics/lyrics'
 
-import {
-  ContentStyles,
-  GridStyles
-} from '../_template/styles'
-
-import {
-  PulpFiction,
-  OneThreeFour,
-  Summergreen,
-  AmericanLemonade
-} from './lyrics/lyrics'
-
-import "../../common/common.css"
 import Artwork from './img/sugar-artwork.jpg'
 import AlbumLogo from './img/sugar-logo.svg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'

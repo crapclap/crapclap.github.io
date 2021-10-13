@@ -1,20 +1,13 @@
-import React, { FC, useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom'
-
-import {
-  Grid,
-  Container,
-  Typography
-} from '@material-ui/core';
-
-import {
-  createStyles,
-  makeStyles,
-  Theme
-} from '@material-ui/core/styles';
-
 import "../common/common.css"
 import "./top.css"
+
+import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom'
+import { Grid, Container, Typography } from '@material-ui/core';
+
+
+import { GridStyles, ContentStyles } from './styles'
+import { MusicList, VideoList } from '../common/list/list'
 
 import FollowUs from './img/follow_us.png'
 import Invisible from './img/invisible.png'
@@ -23,11 +16,8 @@ import Music from './img/music.png'
 import Video from './img/video.png'
 import Instagram from './img/instagram.svg'
 import Twitter from './img/twitter.svg'
-import Marble from './img/marble-pc.svg'
 import ScrollLeft from './img/scroll_left.svg'
 import ScrollRight from './img/scroll_right.svg'
-
-import { MusicList, VideoList } from '../common/list/list'
 
 const scrollTop = (): number => {
   return Math.max(
@@ -39,8 +29,8 @@ const scrollTop = (): number => {
 
 const Top: React.FC = () => {
 
-  const grid = gridStyles();
-  const cont = useStyles();
+  const grid = GridStyles();
+  const cont = ContentStyles();
 
   const [DynamicImgWeb, setDynamicImgWeb] = useState<string>(Logo);
   const [DynamicImgMobile, setDynamicImgMobile] = useState<string>(Invisible);
@@ -138,17 +128,17 @@ const Top: React.FC = () => {
                 <img src={ScrollRight} className={grid.scroll_right} onClick={() => horizontalScrollMusic(280)} alt='scrollRight' />
 
                 <ul className={cont.music_list} ref={ref_music} >
-                    {MusicList.map((music) => {
-                      return (
-                        <li className={cont.music_item}>
-                          <Link to={'discography/' + music.page} className={cont.music_link}>
-                            <img src={music.artwork} className={cont.music_artwork} alt='artwork' />
-                            <Typography align='left' className={cont.music_desc_title}> {music.title} </Typography>
-                            <Typography align='left' className={cont.music_desc_order}> {music.order} </Typography>
-                          </Link>
-                        </li>
-                      )
-                    })}
+                  {MusicList.map((music) => {
+                    return (
+                      <li className={cont.music_item}>
+                        <Link to={'discography/' + music.page} className={cont.music_link}>
+                          <img src={music.artwork} className={cont.music_artwork} alt='artwork' />
+                          <Typography align='left' className={cont.music_desc_title}> {music.title} </Typography>
+                          <Typography align='left' className={cont.music_desc_order}> {music.order} </Typography>
+                        </Link>
+                      </li>
+                    )
+                  })}
                 </ul>
 
 
@@ -168,211 +158,5 @@ const Top: React.FC = () => {
     </div >
   )
 }
-
-const gridStyles = makeStyles((theme: Theme) =>
-
-  createStyles({
-
-    top_root: {
-      [theme.breakpoints.down('sm')]: {
-        marginTop: 100,
-      },
-      [theme.breakpoints.up('md')]: {
-        marginTop: 160,
-      },
-      [theme.breakpoints.up('lg')]: {
-        marginTop: 160,
-      },
-      marginBottom: 400,
-    },
-    meta_root: {
-    },
-    media_root: {
-    },
-    media_scroll_down: {
-      marginTop: '200px',
-      marginBottom: '200px',
-    },
-    media_music: {
-      marginTop: '200px',
-      marginBottom: '200px',
-      position: 'relative',
-      '&:hover': {
-        '& $scroll_left, $scroll_right': {
-          display: 'block',
-        }
-      }
-    },
-    media_video: {
-      marginTop: '200px',
-      marginBottom: '200px',
-      position: 'relative',
-      '&:hover': {
-        '& $scroll_left, $scroll_right': {
-          display: 'block',
-        }
-      }
-    },
-    scroll_left: {
-      position: 'absolute',
-      left: 0,
-      top: '50%',
-      display: 'none',
-    },
-    scroll_right: {
-      position: 'absolute',
-      right: 0,
-      top: '50%',
-      display: 'none',
-    },
-  })
-)
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-      backgroundImage: `url(${Marble})`,
-      position: 'relative',
-      height: '100 %',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: '100 %',
-      margin: 0,
-      padding: 0,
-    },
-    scroll_down_typo: {
-      marginTop: 250,
-      [theme.breakpoints.down('sm')]: {
-        display: 'none',
-      },
-    },
-    dynamic_img_web: {
-      display: 'flex',
-      position: 'fixed',
-      width: 100,
-      top: '50%',
-      left: '25%',
-      [theme.breakpoints.down('sm')]: {
-        display: 'none'
-      },
-    },
-    dynamic_img_mobile: {
-      display: 'flex',
-      position: 'fixed',
-      width: 30,
-      top: '50%',
-      left: '10%',
-      [theme.breakpoints.up('md')]: {
-        display: 'none'
-      },
-      [theme.breakpoints.up('lg')]: {
-        display: 'none'
-      },
-    },
-    mobile_logo: {
-      [theme.breakpoints.down('sm')]: {
-        width: 100,
-        marginTop: 250,
-      },
-      [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-      [theme.breakpoints.up('lg')]: {
-        display: 'none',
-      },
-    },
-
-    // VIDEO SECTION
-    video_list: {
-      overflowX: 'scroll',
-      whiteSpace: 'nowrap',
-      scrollBehavior: 'smooth',
-      height: '240px',
-    },
-    video_embed: {
-      borderTopLeftRadius: '18px',
-      borderTopRightRadius: '18px',
-      height: '180px',
-    },
-    video_item: {
-      display: 'inline-block',
-      width: '320px',
-      height: '230px',
-      marginRight: '30px',
-    },
-    video_desc: {
-      marginTop: '20px',
-      height: '30px',
-      backgroundColor: 'white',
-      borderRadius: '18px',
-      fontSize: 13,
-      width: '100%',
-    },
-    video_desc_mv: {
-      textAlign: 'right',
-      paddingRight: '20px',
-      color: 'green',
-      fontWeight: 'bold',
-    },
-    video_desc_title: {
-      textAlign: 'left',
-      paddingLeft: '20px',
-      color: 'black',
-      fontWeight: 'bold',
-    },
-
-    // MUSIC SECTION
-    music_list: {
-      overflowX: 'scroll',
-      whiteSpace: 'nowrap',
-      scrollBehavior: 'smooth',
-    },
-    music_link: {
-      textDecoration: 'none',
-      '&:focus, &:hover, &:visited, &:link, &:active': {
-        textDecoration: 'none',
-      },
-      // textDecorationLine: 'none',
-      // textDecorationColor: 'black',
-    },
-    music_item: {
-      display: 'inline-block',
-      marginRight: '30px',
-    },
-    music_artwork: {
-      width: '250px',
-      [theme.breakpoints.down('sm')]: {
-      },
-      [theme.breakpoints.up('md')]: {
-        '&:hover': {
-          width: '200px',
-          margin: '12.5px',
-        },
-      },
-      [theme.breakpoints.up('lg')]: {
-        '&:hover': {
-          width: '200px',
-          margin: '12.5px',
-        },
-      },
-    },
-    music_desc_title: {
-      fontFamily: 'Ariel',
-      fontWeight: 'bold',
-      fontSize: 15,
-    },
-    music_desc_order: {
-
-    },
-
-    // SNS
-    twitter: {
-      paddingRight: '0',
-    },
-    instagram: {
-      paddingLeft: '0',
-    },
-  }),
-);
 
 export default Top

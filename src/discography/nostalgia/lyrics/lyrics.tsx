@@ -1,10 +1,7 @@
-import React from 'react'
-import {
-  Container,
-  Typography
-} from '@material-ui/core';
-
 import "../../../common/common.css"
+
+import { Container, Typography } from '@material-ui/core';
+
 import { LyricStyles } from '../../_template/styles'
 
 export const NostalgiaLyric = () => {

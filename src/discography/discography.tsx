@@ -1,12 +1,10 @@
-import React from 'react'
-
 import "../common/common.css"
 
 const Discography = () => {
 
   return (
     <div>
-      Under Construction
+      <h1>Under Construction</h1>
     </div>
   )
 }

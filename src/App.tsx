@@ -1,12 +1,8 @@
-import React from 'react'
-import smoothscroll from 'smoothscroll-polyfill';
-import { 
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
-
 import './App.css'
+
+import smoothscroll from 'smoothscroll-polyfill';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 import AutoScrollToTop from './common/function/autoScrollToTop.jsx'
 import Footer from './common/footer/footer'
 import Header from './common/header/header'
@@ -25,9 +21,9 @@ smoothscroll.polyfill();
 function App() {
   return (
     <div className="App">
-      <Router  basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
-        <AutoScrollToTop />
+          <AutoScrollToTop />
           <Header />
           <Switch>
             <Route exact path="/" component={Top} />

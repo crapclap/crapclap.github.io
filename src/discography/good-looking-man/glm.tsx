@@ -1,27 +1,13 @@
-import React from 'react'
+import "../../common/common.css"
+
 import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import { Container, Divider, Grid, Typography } from '@material-ui/core';
 
-import {
-  Container,
-  Divider,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { MilkTea, Rain, TheTime } from './lyrics/lyrics'
+import { ContentStyles, GridStyles } from '../_template/styles'
 
-import {
-  MilkTea,
-  Rain,
-  TheTime
-} from './lyrics/lyrics'
-
-import {
-  ContentStyles,
-  GridStyles
-} from '../_template/styles'
-
-import "../../common/common.css"
 import Artwork from './img/glm-artwork.jpg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'
 import SpotifyLogo from '../../common/img/spotify.png'

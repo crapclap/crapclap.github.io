@@ -1,10 +1,7 @@
-import React from 'react'
-import {
-  Container,
-  Typography
-} from '@material-ui/core';
-
 import "../../../common/common.css"
+
+import { Container, Typography } from '@material-ui/core';
+
 import { LyricStyles } from '../../_template/styles'
 
 export const LoveMeDo = () => {
@@ -176,46 +173,46 @@ export const UnluckyStrike = () => {
         <Typography variant="body2" align='left' className={classes.lyric}>
 
           <div className={classes.lyric_block}>
-          本日1本目はベランダで<br />
-          起き抜けの身体を起こすためのもの<br />
-          1日が始まる<br />
+            本日1本目はベランダで<br />
+            起き抜けの身体を起こすためのもの<br />
+            1日が始まる<br />
           </div>
           <div className={classes.lyric_block}>
-          誰か想いながら吸う2本目はほろ苦く<br />
-          やけに青い空は日曜<br />
-          心雨模様<br />
+            誰か想いながら吸う2本目はほろ苦く<br />
+            やけに青い空は日曜<br />
+            心雨模様<br />
           </div>
           <div className={classes.lyric_block}>
-          ふいに火をつけた3本目<br />
-          懐かしい街を歩く<br />
-          あの日気をつけた坂歩けば 呼吸も速くなる<br />
+            ふいに火をつけた3本目<br />
+            懐かしい街を歩く<br />
+            あの日気をつけた坂歩けば 呼吸も速くなる<br />
           </div>
           <div className={classes.lyric_block}>
-          誰か想って4本目<br />
-          コンビニのスモーキングエリア<br />
-          新しく出来たらしいな 研修中の店員さん<br />
+            誰か想って4本目<br />
+            コンビニのスモーキングエリア<br />
+            新しく出来たらしいな 研修中の店員さん<br />
           </div>
           <div className={classes.lyric_block}>
-          変わってしまったな<br />
-          気づいたらスーツなんか着て<br />
-          思い出し笑いの１つもあればいいな<br />
-          まだまだ歩けるかい<br />
-          まだ火をつけたばかり<br />
-          あと何本吸ったら君に会えるかな<br />
+            変わってしまったな<br />
+            気づいたらスーツなんか着て<br />
+            思い出し笑いの１つもあればいいな<br />
+            まだまだ歩けるかい<br />
+            まだ火をつけたばかり<br />
+            あと何本吸ったら君に会えるかな<br />
           </div>
           <div className={classes.lyric_block}>
-          そりゃラークに過ごせればいいけど<br />
-          クールな目してピースな言葉<br />
-          最低最高な瞬間のハイライト<br />
-          もう一度見れたりしないかな<br />
+            そりゃラークに過ごせればいいけど<br />
+            クールな目してピースな言葉<br />
+            最低最高な瞬間のハイライト<br />
+            もう一度見れたりしないかな<br />
           </div>
           <div className={classes.lyric_block}>
-          夜に照らされ5本目の煙よ月まで届け<br />
-          もう優しくしなくていいよ<br />
-          そのまま消えてよ<br />
-          誰か想いながら吸い殻になり灰皿へGO<br />
-          僕は生きている<br />
-          たばこを吸っている<br />
+            夜に照らされ5本目の煙よ月まで届け<br />
+            もう優しくしなくていいよ<br />
+            そのまま消えてよ<br />
+            誰か想いながら吸い殻になり灰皿へGO<br />
+            僕は生きている<br />
+            たばこを吸っている<br />
           </div>
         </Typography>
       </Container>

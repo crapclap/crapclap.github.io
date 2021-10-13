@@ -1,23 +1,13 @@
-import React from 'react'
 import { Link as Scroll } from 'react-scroll';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-
-import {
-  Container,
-  Divider,
-  Grid,
-  Typography
-} from '@material-ui/core';
+import { Container, Divider, Grid, Typography } from '@material-ui/core';
 
 import { NostalgiaLyric } from './lyrics/lyrics'
-
-import {
-  ContentStyles,
-  GridStyles
-} from '../_template/styles'
+import { ContentStyles, GridStyles } from '../_template/styles'
 
 import "../../common/common.css"
+
 import Artwork from './img/nostalgia-artwork.jpg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'
 import SpotifyLogo from '../../common/img/spotify.png'

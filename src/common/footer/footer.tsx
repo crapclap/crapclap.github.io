@@ -1,5 +1,5 @@
-import React from "react";
 import "../common.css"
+
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 

@@ -1,4 +1,3 @@
-import React, { FC, useEffect, useState } from 'react';
 import GoodLookingMan_Artwork from '../../../src/discography/good-looking-man/img/glm-artwork.jpg'
 import Merry_Artwork from '../../../src/discography/merry/img/merry-artwork.jpg'
 import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-artwork.jpg'
