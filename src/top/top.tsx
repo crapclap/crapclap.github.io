@@ -1,8 +1,8 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, useRef } from 'react';
+import { isMobile } from 'react-device-detect';
 import { Link } from 'react-router-dom'
 
 import {
-  Button,
   Grid,
   Container,
   Typography
@@ -18,12 +18,15 @@ import "../common/common.css"
 import "./top.css"
 
 import FollowUs from './img/follow_us.png'
+import Invisible from './img/invisible.png'
 import Logo from "../common/img/logo.svg"
 import Music from './img/music.png'
 import Video from './img/video.png'
 import Instagram from './img/instagram.svg'
 import Twitter from './img/twitter.svg'
 import Marble from './img/marble-pc.svg'
+import ScrollLeft from './img/scroll_left.svg'
+import ScrollRight from './img/scroll_right.svg'
 
 import { MusicList, VideoList } from '../common/list/list'
 
@@ -35,29 +38,49 @@ const scrollTop = (): number => {
   );
 };
 
+
 const Top: React.FC = () => {
 
   const grid = gridStyles();
   const cont = useStyles();
 
-  const [DynamicImg, setDynamicImg] = useState<string>(Logo);
+  const [DynamicImgWeb, setDynamicImgWeb] = useState<string>(Logo);
+  const [DynamicImgMobile, setDynamicImgMobile] = useState<string>(Invisible);
+  const [ScrollDown, setScrollDown] = useState<string>('SCROLL DOWN ↓');
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  const scroll = (offset: number) => {
+
+    if (ref.current != null) {
+      ref.current.scrollLeft += offset;
+      console.log(ref.current)
+    }
+  }
 
   const onScroll = (): void => {
 
     const position = scrollTop();
+    setScrollDown('');
 
     if (position >= 200 && position <= 800) {
-      setDynamicImg(Video);
+      setDynamicImgWeb(Video);
+      setDynamicImgMobile(Video);
     }
     else if (position >= 800 && position <= 1200) {
-      setDynamicImg(Music);
+      setDynamicImgWeb(Music);
+      setDynamicImgMobile(Music);
     }
     else if (position >= 1200) {
-      setDynamicImg(FollowUs);
+      setDynamicImgWeb(FollowUs);
+      setDynamicImgMobile(Invisible);
     }
     else {
-      setDynamicImg(Logo);
+      setDynamicImgWeb(Logo);
+      setDynamicImgMobile(Invisible);
     }
+
+
   };
 
   useEffect(() => {
@@ -73,19 +96,24 @@ const Top: React.FC = () => {
           <div id="ScrollToTop" />
 
           <Grid item xs={12} md={6} className={grid.meta_root}>
-            <img src={DynamicImg} className={cont.dynamic_img} alt='dynamicImg' />
+            <img src={DynamicImgWeb} className={cont.dynamic_img_web} alt='dynamicImg' />
+            <img src={DynamicImgMobile} className={cont.dynamic_img_mobile} alt='dynamicImg' />
           </Grid>
 
           <Grid item xs={12} md={6} className={grid.media_root}>
             <Grid container spacing={0}>
 
               <Grid item xs={12} md={12} className={grid.media_scroll_down}>
-                <Typography align='center' className={cont.typo}>
-                  SCROLL DOWN ↓
+                <Typography align='center' className={cont.scroll_down_typo}>
+                  {ScrollDown}
                 </Typography>
+                <img src={Logo} className={cont.mobile_logo} alt='mobileLogo' />
               </Grid>
 
-              <Grid item xs={12} md={12} className={grid.media_scroll_down}>
+              <Grid item xs={12} md={12} className={grid.media_video}>
+
+                <img src={ScrollLeft} className={grid.scroll_left} alt='scrollLeft' />
+                <img src={ScrollRight} className={grid.scroll_right} alt='scrollRight' />
                 <ul className={cont.video_list}>
                   {VideoList.map((video, index: number) => {
                     return (
@@ -99,22 +127,29 @@ const Top: React.FC = () => {
                     )
                   })}
                 </ul>
+
               </Grid>
 
-              <Grid item xs={12} md={12} className={grid.media_scroll_down}>
-                <ul className={cont.music_list}>
-                  {MusicList.map((music, index: number) => {
-                    return (
-                      <li className={cont.music_item}>
-                        <Link to={'discography/' + music.page} className={cont.music_link}>
-                          <img src={music.artwork} className={cont.music_artwork} alt='artwork' />
-                          <Typography align='left' className={cont.music_desc_title}> {music.title} </Typography>
-                          <Typography align='left' className={cont.music_desc_order}> {music.order} </Typography>
-                        </Link>
-                      </li>
-                    )
-                  })}
-                </ul>
+              <Grid item xs={12} md={12} className={grid.media_music}>
+
+                <img src={ScrollLeft} className={grid.scroll_left} onClick={() => scroll(20)} alt='scrollLeft' />
+                <img src={ScrollRight} className={grid.scroll_right} onClick={() => scroll(-20)} alt='scrollRight' />
+                <div ref={ref}>
+                  <ul className={cont.music_list} >
+                    {MusicList.map((music, index: number) => {
+                      return (
+                        <li className={cont.music_item}>
+                          <Link to={'discography/' + music.page} className={cont.music_link}>
+                            <img src={music.artwork} className={cont.music_artwork} alt='artwork' />
+                            <Typography align='left' className={cont.music_desc_title}> {music.title} </Typography>
+                            <Typography align='left' className={cont.music_desc_order}> {music.order} </Typography>
+                          </Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+
               </Grid>
 
               <Grid item xs={12} md={12} className={grid.media_scroll_down}>
@@ -128,7 +163,7 @@ const Top: React.FC = () => {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </div >
   )
 }
 
@@ -153,11 +188,40 @@ const gridStyles = makeStyles((theme: Theme) =>
     media_root: {
     },
     media_scroll_down: {
-      marginBottom: '400px',
-    },
-    media_video: {
+      marginTop: '200px',
+      marginBottom: '200px',
     },
     media_music: {
+      marginTop: '200px',
+      marginBottom: '200px',
+      position: 'relative',
+      '&:hover': {
+        '& $scroll_left, $scroll_right': {
+          display: 'block',
+        }
+      }
+    },
+    media_video: {
+      marginTop: '200px',
+      marginBottom: '200px',
+      position: 'relative',
+      '&:hover': {
+        '& $scroll_left, $scroll_right': {
+          display: 'block',
+        }
+      }
+    },
+    scroll_left: {
+      position: 'absolute',
+      left: 0,
+      top: '50%',
+      display: 'none',
+    },
+    scroll_right: {
+      position: 'absolute',
+      right: 0,
+      top: '50%',
+      display: 'none',
     },
   })
 )
@@ -174,16 +238,46 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: 0,
       padding: 0,
     },
-    typo: {
+    scroll_down_typo: {
       marginTop: 250,
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      },
     },
-    dynamic_img: {
+    dynamic_img_web: {
       display: 'flex',
       position: 'fixed',
       width: 100,
       top: '50%',
       left: '25%',
-      // bottom: '50%',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none'
+      },
+    },
+    dynamic_img_mobile: {
+      display: 'flex',
+      position: 'fixed',
+      width: 30,
+      top: '50%',
+      left: '10%',
+      [theme.breakpoints.up('md')]: {
+        display: 'none'
+      },
+      [theme.breakpoints.up('lg')]: {
+        display: 'none'
+      },
+    },
+    mobile_logo: {
+      [theme.breakpoints.down('sm')]: {
+        width: 100,
+        marginTop: 250,
+      },
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.up('lg')]: {
+        display: 'none',
+      },
     },
 
     // VIDEO SECTION
@@ -191,6 +285,7 @@ const useStyles = makeStyles((theme: Theme) =>
       overflowX: 'auto',
       whiteSpace: 'nowrap',
       height: '240px',
+      top: '50%',
     },
     video_embed: {
       borderTopLeftRadius: '18px',
@@ -243,11 +338,20 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     music_artwork: {
       width: '250px',
-      '&:hover': {
-        width: '200px',
-        margin: '12.5px',
+      [theme.breakpoints.down('sm')]: {
       },
-
+      [theme.breakpoints.up('md')]: {
+        '&:hover': {
+          width: '200px',
+          margin: '12.5px',
+        },
+      },
+      [theme.breakpoints.up('lg')]: {
+        '&:hover': {
+          width: '200px',
+          margin: '12.5px',
+        },
+      },
     },
     music_desc_title: {
       fontFamily: 'Ariel',
