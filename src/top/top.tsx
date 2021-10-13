@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState, useRef } from 'react';
-import { isMobile } from 'react-device-detect';
 import { Link } from 'react-router-dom'
 
 import {
@@ -38,7 +37,6 @@ const scrollTop = (): number => {
   );
 };
 
-
 const Top: React.FC = () => {
 
   const grid = gridStyles();
@@ -48,13 +46,19 @@ const Top: React.FC = () => {
   const [DynamicImgMobile, setDynamicImgMobile] = useState<string>(Invisible);
   const [ScrollDown, setScrollDown] = useState<string>('SCROLL DOWN ↓');
 
-  const ref = useRef<HTMLDivElement>(null);
+  const ref_music = useRef<HTMLUListElement>(null);
 
-  const scroll = (offset: number) => {
+  const horizontalScrollMusic = (offset: number) => {
+    if (ref_music.current != null) {
+      ref_music.current.scrollLeft += offset;
+    }
+  }
 
-    if (ref.current != null) {
-      ref.current.scrollLeft += offset;
-      console.log(ref.current)
+  const ref_video = useRef<HTMLUListElement>(null);
+
+  const horizontalScrollVideo = (offset: number) => {
+    if (ref_video.current != null) {
+      ref_video.current.scrollLeft += offset;
     }
   }
 
@@ -79,8 +83,6 @@ const Top: React.FC = () => {
       setDynamicImgWeb(Logo);
       setDynamicImgMobile(Invisible);
     }
-
-
   };
 
   useEffect(() => {
@@ -112,10 +114,10 @@ const Top: React.FC = () => {
 
               <Grid item xs={12} md={12} className={grid.media_video}>
 
-                <img src={ScrollLeft} className={grid.scroll_left} alt='scrollLeft' />
-                <img src={ScrollRight} className={grid.scroll_right} alt='scrollRight' />
-                <ul className={cont.video_list}>
-                  {VideoList.map((video, index: number) => {
+                <img src={ScrollLeft} className={grid.scroll_left} onClick={() => horizontalScrollVideo(-360)} alt='scrollLeft' />
+                <img src={ScrollRight} className={grid.scroll_right} onClick={() => horizontalScrollVideo(360)} alt='scrollRight' />
+                <ul className={cont.video_list} ref={ref_video}>
+                  {VideoList.map((video) => {
                     return (
                       <li className={cont.video_item}>
                         <iframe src={video.url} title={video.title} frameBorder="0" allow="autoplay;" width="100%" allowFullScreen className={cont.video_embed} />
@@ -132,11 +134,11 @@ const Top: React.FC = () => {
 
               <Grid item xs={12} md={12} className={grid.media_music}>
 
-                <img src={ScrollLeft} className={grid.scroll_left} onClick={() => scroll(20)} alt='scrollLeft' />
-                <img src={ScrollRight} className={grid.scroll_right} onClick={() => scroll(-20)} alt='scrollRight' />
-                <div ref={ref}>
-                  <ul className={cont.music_list} >
-                    {MusicList.map((music, index: number) => {
+                <img src={ScrollLeft} className={grid.scroll_left} onClick={() => horizontalScrollMusic(-280)} alt='scrollLeft' />
+                <img src={ScrollRight} className={grid.scroll_right} onClick={() => horizontalScrollMusic(280)} alt='scrollRight' />
+
+                <ul className={cont.music_list} ref={ref_music} >
+                    {MusicList.map((music) => {
                       return (
                         <li className={cont.music_item}>
                           <Link to={'discography/' + music.page} className={cont.music_link}>
@@ -147,8 +149,8 @@ const Top: React.FC = () => {
                         </li>
                       )
                     })}
-                  </ul>
-                </div>
+                </ul>
+
 
               </Grid>
 
@@ -282,10 +284,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
     // VIDEO SECTION
     video_list: {
-      overflowX: 'auto',
+      overflowX: 'scroll',
       whiteSpace: 'nowrap',
+      scrollBehavior: 'smooth',
       height: '240px',
-      top: '50%',
     },
     video_embed: {
       borderTopLeftRadius: '18px',
@@ -321,8 +323,9 @@ const useStyles = makeStyles((theme: Theme) =>
 
     // MUSIC SECTION
     music_list: {
-      overflowX: 'auto',
+      overflowX: 'scroll',
       whiteSpace: 'nowrap',
+      scrollBehavior: 'smooth',
     },
     music_link: {
       textDecoration: 'none',
