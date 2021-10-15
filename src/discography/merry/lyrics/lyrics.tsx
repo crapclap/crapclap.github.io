@@ -12,7 +12,7 @@ export const MerryLyric = () => {
     <div>
       <Container maxWidth="sm">
         <Typography variant="h6" align='left' display="block" className={classes.song_title}>
-          メリー
+          メリー feat. Mayu from Nagie Lane
         </Typography>
         <Typography variant="body2" align='left' className={classes.lyric}>
 

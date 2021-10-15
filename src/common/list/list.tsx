@@ -108,13 +108,13 @@ export const Nostalgia: Music = {
 }
 
 export const Merry: Music = {
-  title: 'メリー feat. Mayu from Nagie Lane',
+  title: 'メリー',
   order: '1st Single',
   artwork: Merry_Artwork,
   page: 'merry',
   song: [
     {
-      name: 'メリー',
+      name: 'メリー feat. Mayu from Nagie Lane',
       id: 'Merry',
     }
   ],

@@ -5,15 +5,14 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import { Grid, Container, Typography } from '@material-ui/core';
 
-
 import { GridStyles, ContentStyles } from './styles'
 import { MusicList, VideoList } from '../common/list/list'
 
-import FollowUs from './img/follow_us.png'
+import FollowUs from './img/follow_us.svg'
 import Invisible from './img/invisible.png'
 import Logo from "../common/img/logo.svg"
-import Music from './img/music.png'
-import Video from './img/video.png'
+import Music from './img/music.svg'
+import Video from './img/video.svg'
 import Instagram from './img/instagram.svg'
 import Twitter from './img/twitter.svg'
 import ScrollLeft from './img/scroll_left.svg'
@@ -34,9 +33,11 @@ const Top: React.FC = () => {
 
   const [DynamicImgWeb, setDynamicImgWeb] = useState<string>(Logo);
   const [DynamicImgMobile, setDynamicImgMobile] = useState<string>(Invisible);
+  const [Rotate, setRotate] = useState<boolean>(false);
   const [ScrollDown, setScrollDown] = useState<string>('SCROLL DOWN ↓');
 
   const ref_music = useRef<HTMLUListElement>(null);
+  const ref_video = useRef<HTMLUListElement>(null);
 
   const horizontalScrollMusic = (offset: number) => {
     if (ref_music.current != null) {
@@ -44,36 +45,50 @@ const Top: React.FC = () => {
     }
   }
 
-  const ref_video = useRef<HTMLUListElement>(null);
-
   const horizontalScrollVideo = (offset: number) => {
     if (ref_video.current != null) {
       ref_video.current.scrollLeft += offset;
     }
   }
 
+  // Change images and rotation dynamically
   const onScroll = (): void => {
 
     const position = scrollTop();
     setScrollDown('');
 
-    if (position >= 200 && position <= 800) {
+    if (position >= 350 && position <= 1100) {
       setDynamicImgWeb(Video);
       setDynamicImgMobile(Video);
+      setRotate(true);
     }
-    else if (position >= 800 && position <= 1200) {
+    else if (position >= 1100 && position <= 1800) {
       setDynamicImgWeb(Music);
       setDynamicImgMobile(Music);
+      setRotate(true);
     }
-    else if (position >= 1200) {
+    else if (position >= 1800) {
       setDynamicImgWeb(FollowUs);
       setDynamicImgMobile(Invisible);
+      setRotate(false);
     }
     else {
       setDynamicImgWeb(Logo);
       setDynamicImgMobile(Invisible);
+      setRotate(false);
     }
   };
+
+  // Rotate Image
+  window.onscroll = function () {
+    let deg = 0
+    if (document.getElementById('rotate') != null) {
+      if (Rotate) {
+        deg = 90 + window.pageYOffset / 110
+      }
+      document.getElementById('rotate')!.style.transform = 'rotate(' + deg + 'rad)';
+    }
+  }
 
   useEffect(() => {
     document.addEventListener("scroll", onScroll);
@@ -88,18 +103,20 @@ const Top: React.FC = () => {
           <div id="ScrollToTop" />
 
           <Grid item xs={12} md={6} className={grid.meta_root}>
-            <img src={DynamicImgWeb} className={cont.dynamic_img_web} alt='dynamicImg' />
-            <img src={DynamicImgMobile} className={cont.dynamic_img_mobile} alt='dynamicImg' />
+            <img src={DynamicImgWeb} className={cont.dynamic_img_web} alt='dynamicImg' id='rotate' />
+            <img src={DynamicImgMobile} className={cont.dynamic_img_mobile} alt='dynamicImg' id='rotate' />
           </Grid>
 
           <Grid item xs={12} md={6} className={grid.media_root}>
             <Grid container spacing={0}>
 
               <Grid item xs={12} md={12} className={grid.media_scroll_down}>
+
                 <Typography align='center' className={cont.scroll_down_typo}>
                   {ScrollDown}
                 </Typography>
                 <img src={Logo} className={cont.mobile_logo} alt='mobileLogo' />
+
               </Grid>
 
               <Grid item xs={12} md={12} className={grid.media_video}>
@@ -141,18 +158,21 @@ const Top: React.FC = () => {
                   })}
                 </ul>
 
-
               </Grid>
 
-              <Grid item xs={12} md={12} className={grid.media_scroll_down}>
-                <table width='100%'>
-                  <td className={cont.twitter}><img src={Twitter} alt='twitter' /></td>
-                  <td className={cont.instagram}><img src={Instagram} alt='instagram' /></td>
-                </table>
+              <Grid item xs={12} md={12} className={grid.media_followus}>
+                <Grid container spacing={0}>
+
+                  <Grid item xs={6} md={6} ><img src={Twitter} className={cont.twitter} alt='twitter' /></Grid>
+                  <Grid item xs={6} md={6} ><img src={Instagram} className={cont.instagram} alt='instagram' /></Grid>
+
+                </Grid>
               </Grid>
 
             </Grid>
+
           </Grid>
+
         </Grid>
       </Container>
     </div >

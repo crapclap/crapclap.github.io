@@ -7,44 +7,44 @@ export const GridStyles = makeStyles((theme: Theme) =>
   createStyles({
 
     top_root: {
-      [theme.breakpoints.down('sm')]: {
-        marginTop: 100,
-      },
-      [theme.breakpoints.up('md')]: {
-        marginTop: 160,
-      },
-      [theme.breakpoints.up('lg')]: {
-        marginTop: 160,
-      },
-      marginBottom: 400,
     },
     meta_root: {
     },
     media_root: {
     },
     media_scroll_down: {
-      marginTop: '200px',
-      marginBottom: '200px',
+      marginBottom: '360px',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: 140,
+      },
+      [theme.breakpoints.up('md')]: {
+        marginTop: 140,
+      },
     },
     media_music: {
-      marginTop: '200px',
-      marginBottom: '200px',
+      marginBottom: '450px',
       position: 'relative',
-      '&:hover': {
-        '& $scroll_left, $scroll_right': {
-          display: 'block',
+      [theme.breakpoints.up('md')]: {
+        '&:hover': {
+          '& $scroll_left, $scroll_right': {
+            display: 'block',
+          }
         }
-      }
+      },
     },
     media_video: {
-      marginTop: '200px',
-      marginBottom: '200px',
+      marginBottom: '450px',
       position: 'relative',
-      '&:hover': {
-        '& $scroll_left, $scroll_right': {
-          display: 'block',
+      [theme.breakpoints.up('md')]: {
+        '&:hover': {
+          '& $scroll_left, $scroll_right': {
+            display: 'block',
+          }
         }
-      }
+      },
+    },
+    media_followus: {
+      marginBottom: '300px',
     },
     scroll_left: {
       position: 'absolute',
@@ -94,11 +94,8 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       position: 'fixed',
       width: 30,
       top: '50%',
-      left: '10%',
+      left: '5%',
       [theme.breakpoints.up('md')]: {
-        display: 'none'
-      },
-      [theme.breakpoints.up('lg')]: {
         display: 'none'
       },
     },
@@ -108,9 +105,6 @@ export const ContentStyles = makeStyles((theme: Theme) =>
         marginTop: 250,
       },
       [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-      [theme.breakpoints.up('lg')]: {
         display: 'none',
       },
     },
@@ -138,19 +132,23 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       height: '30px',
       backgroundColor: 'white',
       borderRadius: '18px',
-      fontSize: 13,
+      font: 'Arial',
       width: '100%',
     },
     video_desc_mv: {
       textAlign: 'right',
+      verticalAlign: 'middle',
       paddingRight: '20px',
-      color: 'green',
+      color: '#67E2D8',
+      fontSize: 12,
       fontWeight: 'bold',
     },
     video_desc_title: {
       textAlign: 'left',
+      verticalAlign: 'middle',
       paddingLeft: '20px',
-      color: 'black',
+      color: '#0D1B22',
+      fontSize: 13,
       fontWeight: 'bold',
     },
 
@@ -165,12 +163,10 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       '&:focus, &:hover, &:visited, &:link, &:active': {
         textDecoration: 'none',
       },
-      // textDecorationLine: 'none',
-      // textDecorationColor: 'black',
     },
     music_item: {
       display: 'inline-block',
-      marginRight: '30px',
+      marginRight: '20px',
     },
     music_artwork: {
       width: '250px',
@@ -180,30 +176,49 @@ export const ContentStyles = makeStyles((theme: Theme) =>
         '&:hover': {
           width: '200px',
           margin: '12.5px',
-        },
-      },
-      [theme.breakpoints.up('lg')]: {
-        '&:hover': {
-          width: '200px',
-          margin: '12.5px',
+          marginBottom: '25px',
         },
       },
     },
     music_desc_title: {
+      marginTop: '20px',
+      width: '250px',
       fontFamily: 'Ariel',
       fontWeight: 'bold',
       fontSize: 15,
+      color: '#0D1B22'
     },
     music_desc_order: {
-
+      width: '250px',
+      fontFamily: 'Ariel',
+      fontSize: 11,
+      color: '#B2B2B2'
     },
 
     // SNS
     twitter: {
-      paddingRight: '0',
+      marginRight: '10px',
+      float: 'right',
+      borderRadius: '50%',
+      [theme.breakpoints.down('sm')]: {
+      },
+      [theme.breakpoints.up('md')]: {
+        '&:hover': {
+          boxShadow: '2px 2px 2px rgba(0,0,0,.7)',
+        },
+      },
     },
     instagram: {
-      paddingLeft: '0',
+      marginLeft: '10px',
+      float: 'left',
+      borderRadius: '50%',
+      [theme.breakpoints.down('sm')]: {
+      },
+      [theme.breakpoints.up('md')]: {
+        '&:hover': {
+          boxShadow: '2px 2px 2px rgba(0,0,0,.7)',
+        },
+      },
     },
   }),
 );
