@@ -51,6 +51,8 @@ const Top: React.FC = () => {
     }
   }
 
+  const screenHeight = window.parent.screen.height
+
   // Change images and rotation dynamically
   const onScroll = (): void => {
 
@@ -168,6 +170,7 @@ const Top: React.FC = () => {
                       <img src={Twitter} className={cont.twitter} alt='twitter' />
                     </a>
                   </Grid>
+
                   <Grid item xs={6} md={6} >
                     <a href='https://www.instagram.com/crap_clap/?hl=ja' >
                       <img src={Instagram} className={cont.instagram} alt='instagram' />

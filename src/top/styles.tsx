@@ -13,13 +13,11 @@ export const GridStyles = makeStyles((theme: Theme) =>
     media_root: {
     },
     media_scroll_down: {
-      marginBottom: '360px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: 140,
+        marginTop: '20vh',
       },
-      [theme.breakpoints.up('md')]: {
-        marginTop: 140,
-      },
+      marginBottom: '50vh',
+      marginTop: '50vh',
     },
     media_music: {
       marginBottom: '450px',
@@ -44,7 +42,7 @@ export const GridStyles = makeStyles((theme: Theme) =>
       },
     },
     media_followus: {
-      marginBottom: '300px',
+      marginBottom: '40vh',
     },
     scroll_left: {
       position: 'absolute',
@@ -74,7 +72,6 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       padding: 0,
     },
     scroll_down_typo: {
-      marginTop: 250,
       [theme.breakpoints.down('sm')]: {
         display: 'none',
       },
