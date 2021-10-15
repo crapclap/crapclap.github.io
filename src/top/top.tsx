@@ -163,8 +163,16 @@ const Top: React.FC = () => {
               <Grid item xs={12} md={12} className={grid.media_followus}>
                 <Grid container spacing={0}>
 
-                  <Grid item xs={6} md={6} ><img src={Twitter} className={cont.twitter} alt='twitter' /></Grid>
-                  <Grid item xs={6} md={6} ><img src={Instagram} className={cont.instagram} alt='instagram' /></Grid>
+                  <Grid item xs={6} md={6} >
+                    <a href='https://twitter.com/crap_clap' >
+                      <img src={Twitter} className={cont.twitter} alt='twitter' />
+                    </a>
+                  </Grid>
+                  <Grid item xs={6} md={6} >
+                    <a href='https://www.instagram.com/crap_clap/?hl=ja' >
+                      <img src={Instagram} className={cont.instagram} alt='instagram' />
+                    </a>
+                  </Grid>
 
                 </Grid>
               </Grid>
