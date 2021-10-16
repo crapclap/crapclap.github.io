@@ -3,7 +3,7 @@ import "../common.css"
 import Logo from "../img/logo.svg"
 
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { AppBar} from '@material-ui/core';
+import { AppBar } from '@material-ui/core';
 
 const Header = () => {
 
@@ -12,7 +12,9 @@ const Header = () => {
   return (
     <div className={classes.header} id='Header'>
       <AppBar position="fixed" className={classes.bar}>
-        <img src={Logo} className={classes.logo} alt='logo'/>
+        <a href='/' className={classes.logo} >
+          <img src={Logo} alt='logo' />
+        </a>
       </AppBar>
     </div>
   );
@@ -27,7 +29,6 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      // height: 60,
     },
     logo: {
       height: 37,
