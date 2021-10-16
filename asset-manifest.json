@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ee3cd303.chunk.css",
-    "main.js": "/static/js/main.22cbe474.chunk.js",
-    "main.js.map": "/static/js/main.22cbe474.chunk.js.map",
+    "main.js": "/static/js/main.e6619e36.chunk.js",
+    "main.js.map": "/static/js/main.e6619e36.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.578123b4.js",
     "runtime-main.js.map": "/static/js/runtime-main.578123b4.js.map",
     "static/js/2.e70a9569.chunk.js": "/static/js/2.e70a9569.chunk.js",
@@ -14,6 +14,7 @@
     "static/js/2.e70a9569.chunk.js.LICENSE.txt": "/static/js/2.e70a9569.chunk.js.LICENSE.txt",
     "static/media/apple-music.49964240.svg": "/static/media/apple-music.49964240.svg",
     "static/media/arrow.edc188b7.svg": "/static/media/arrow.edc188b7.svg",
+    "static/media/crapclap.2d99a44f.svg": "/static/media/crapclap.2d99a44f.svg",
     "static/media/follow_us.b6698262.svg": "/static/media/follow_us.b6698262.svg",
     "static/media/glm-artwork.0b998218.jpg": "/static/media/glm-artwork.0b998218.jpg",
     "static/media/common.css": "/static/media/grain-bg.446a890a.jpeg",
@@ -36,6 +37,6 @@
     "static/js/runtime-main.578123b4.js",
     "static/js/2.e70a9569.chunk.js",
     "static/css/main.ee3cd303.chunk.css",
-    "static/js/main.22cbe474.chunk.js"
+    "static/js/main.e6619e36.chunk.js"
   ]
 }
