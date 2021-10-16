@@ -57,7 +57,7 @@ const Top: React.FC = () => {
   const onScroll = (): void => {
 
     const position = scrollTop();
-    setScrollDown('');
+    // setScrollDown('');
 
     if (position >= 350 && position <= 1100) {
       setDynamicImgWeb(Video);

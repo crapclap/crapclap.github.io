@@ -72,6 +72,9 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       padding: 0,
     },
     scroll_down_typo: {
+      fontFamily: 'Arial',
+      fontSize: '14',
+      fontWeight: 'bold',
       [theme.breakpoints.down('sm')]: {
         display: 'none',
       },
@@ -91,7 +94,8 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       position: 'fixed',
       width: 30,
       top: '50%',
-      left: '5%',
+      left: '12%',
+      zIndex: 1,
       [theme.breakpoints.up('md')]: {
         display: 'none'
       },
