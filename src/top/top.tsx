@@ -51,7 +51,7 @@ const Top: React.FC = () => {
     }
   }
 
-  const screenHeight = window.parent.screen.height
+  // const screenHeight = window.parent.screen.height
 
   // Change images and rotation dynamically
   const onScroll = (): void => {

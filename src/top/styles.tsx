@@ -180,14 +180,14 @@ export const ContentStyles = makeStyles((theme: Theme) =>
     music_desc_title: {
       marginTop: '20px',
       width: '250px',
-      fontFamily: 'Ariel',
+      fontFamily: 'Arial',
       fontWeight: 'bold',
       fontSize: 15,
       color: '#0D1B22'
     },
     music_desc_order: {
       width: '250px',
-      fontFamily: 'Ariel',
+      fontFamily: 'Arial',
       fontSize: 11,
       color: '#B2B2B2'
     },
