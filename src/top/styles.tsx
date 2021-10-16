@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-import Marble from './img/marble-pc.svg'
+import PCBackground from './img/pc_bg.svg'
 
 export const GridStyles = makeStyles((theme: Theme) =>
 
@@ -62,14 +62,27 @@ export const GridStyles = makeStyles((theme: Theme) =>
 export const ContentStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
-      backgroundImage: `url(${Marble})`,
-      position: 'relative',
-      height: '100 %',
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '100 %',
+      backgroundSize: '100%',
+      position: 'relative',
+      height: '100%',
+      flexGrow: 1,
       margin: 0,
       padding: 0,
+      [theme.breakpoints.down('sm')]: {
+        backgroundImage: `url(${PCBackground})`,
+      },
+      [theme.breakpoints.up('md')]: {
+        backgroundImage: `url(${PCBackground})`,
+      },
+    },
+    '@global': {
+      '.makeStyles-logo-3': {
+        display: 'none',
+      },
+      '.jss3': {
+        display: 'none',
+      },
     },
     scroll_down_typo: {
       fontFamily: 'Arial',
@@ -82,7 +95,6 @@ export const ContentStyles = makeStyles((theme: Theme) =>
     dynamic_img_web: {
       display: 'flex',
       position: 'fixed',
-      width: 100,
       top: '50%',
       left: '25%',
       [theme.breakpoints.down('sm')]: {
@@ -168,18 +180,26 @@ export const ContentStyles = makeStyles((theme: Theme) =>
     music_item: {
       display: 'inline-block',
       marginRight: '20px',
-    },
-    music_artwork: {
-      width: '250px',
       [theme.breakpoints.down('sm')]: {
       },
       [theme.breakpoints.up('md')]: {
         '&:hover': {
-          width: '200px',
-          margin: '12.5px',
-          marginBottom: '25px',
+          '& $music_artwork': {
+            display: 'block',
+            width: '200px',
+            paddingTop: '12.5px',
+            paddingLeft: '25px',
+            paddingRight: '12.5px',
+            paddingBottom: '25px',
+          },
+          '& $music_desc_title': {
+            textDecoration: 'underline',
+          },
         },
       },
+    },
+    music_artwork: {
+      width: '250px',
     },
     music_desc_title: {
       marginTop: '20px',
@@ -187,7 +207,7 @@ export const ContentStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Arial',
       fontWeight: 'bold',
       fontSize: 15,
-      color: '#0D1B22'
+      color: '#0D1B22',
     },
     music_desc_order: {
       width: '250px',

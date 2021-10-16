@@ -6,3 +6,11 @@ ul {
 ul::-webkit-scrollbar {  /* Chrome, Safari */
   display:none;
 }
+
+/* .jss3 {
+  display: none;
+}
+
+.makeStyles-logo-3 {
+  display: none;
+} */

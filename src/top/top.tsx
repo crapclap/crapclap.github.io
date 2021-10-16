@@ -10,7 +10,7 @@ import { MusicList, VideoList } from '../common/list/list'
 
 import FollowUs from './img/follow_us.svg'
 import Invisible from './img/invisible.png'
-import Logo from "../common/img/logo.svg"
+import Logo from "./img/crapclap.svg"
 import Music from './img/music.svg'
 import Video from './img/video.svg'
 import Instagram from './img/instagram.svg'
@@ -34,7 +34,6 @@ const Top: React.FC = () => {
   const [DynamicImgWeb, setDynamicImgWeb] = useState<string>(Logo);
   const [DynamicImgMobile, setDynamicImgMobile] = useState<string>(Invisible);
   const [Rotate, setRotate] = useState<boolean>(false);
-  const [ScrollDown, setScrollDown] = useState<string>('SCROLL DOWN ↓');
 
   const ref_music = useRef<HTMLUListElement>(null);
   const ref_video = useRef<HTMLUListElement>(null);
@@ -115,7 +114,7 @@ const Top: React.FC = () => {
               <Grid item xs={12} md={12} className={grid.media_scroll_down}>
 
                 <Typography align='center' className={cont.scroll_down_typo}>
-                  {ScrollDown}
+                  SCROLL DOWN ↓
                 </Typography>
                 <img src={Logo} className={cont.mobile_logo} alt='mobileLogo' />
 

@@ -55,6 +55,20 @@ export const ContentStyles = makeStyles((theme: Theme) =>
     // ROOT
     root: {
     },
+    '@global': {
+      '.makeStyles-logo-3': {
+        height: 37,
+        width: 92,
+        padding: 10,
+        marginLeft: 10,
+      },
+      '.jss3': {
+        height: 37,
+        width: 92,
+        padding: 10,
+        marginLeft: 10,
+      },
+    },
 
     // ALBUM SECTION
     album_artwork: {
