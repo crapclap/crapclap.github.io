@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.effe0427.chunk.css",
-    "main.js": "/static/js/main.fd7c0c6e.chunk.js",
-    "main.js.map": "/static/js/main.fd7c0c6e.chunk.js.map",
+    "main.css": "/static/css/main.ee3cd303.chunk.css",
+    "main.js": "/static/js/main.1de2be91.chunk.js",
+    "main.js.map": "/static/js/main.1de2be91.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.578123b4.js",
     "runtime-main.js.map": "/static/js/runtime-main.578123b4.js.map",
     "static/js/2.cc53e37e.chunk.js": "/static/js/2.cc53e37e.chunk.js",
@@ -10,12 +10,13 @@
     "static/js/3.c198ee16.chunk.js": "/static/js/3.c198ee16.chunk.js",
     "static/js/3.c198ee16.chunk.js.map": "/static/js/3.c198ee16.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.effe0427.chunk.css.map": "/static/css/main.effe0427.chunk.css.map",
+    "static/css/main.ee3cd303.chunk.css.map": "/static/css/main.ee3cd303.chunk.css.map",
     "static/js/2.cc53e37e.chunk.js.LICENSE.txt": "/static/js/2.cc53e37e.chunk.js.LICENSE.txt",
     "static/media/apple-music.49964240.svg": "/static/media/apple-music.49964240.svg",
     "static/media/arrow.edc188b7.svg": "/static/media/arrow.edc188b7.svg",
     "static/media/crapclap.2d99a44f.svg": "/static/media/crapclap.2d99a44f.svg",
     "static/media/follow_us.b6698262.svg": "/static/media/follow_us.b6698262.svg",
+    "static/media/follow_us_sp.04f2456e.svg": "/static/media/follow_us_sp.04f2456e.svg",
     "static/media/glm-artwork.0b998218.jpg": "/static/media/glm-artwork.0b998218.jpg",
     "static/media/common.css": "/static/media/grain-bg.446a890a.jpeg",
     "static/media/instagram.c2927def.svg": "/static/media/instagram.c2927def.svg",
@@ -25,8 +26,10 @@
     "static/media/nostalgia-artwork.33c661bb.jpg": "/static/media/nostalgia-artwork.33c661bb.jpg",
     "static/media/pc_bg.963a0e7b.svg": "/static/media/pc_bg.963a0e7b.svg",
     "static/media/sca-artwork.eab616a3.jpg": "/static/media/sca-artwork.eab616a3.jpg",
+    "static/media/scroll_down.78671b24.svg": "/static/media/scroll_down.78671b24.svg",
     "static/media/scroll_left.84345a50.svg": "/static/media/scroll_left.84345a50.svg",
     "static/media/scroll_right.a5759cb9.svg": "/static/media/scroll_right.a5759cb9.svg",
+    "static/media/sp_bg.70d6acfb.svg": "/static/media/sp_bg.70d6acfb.svg",
     "static/media/spotify.0c4ae91b.png": "/static/media/spotify.0c4ae91b.png",
     "static/media/sugar-artwork.602748a7.jpg": "/static/media/sugar-artwork.602748a7.jpg",
     "static/media/sugar-logo.9a4947d5.svg": "/static/media/sugar-logo.9a4947d5.svg",
@@ -36,7 +39,7 @@
   "entrypoints": [
     "static/js/runtime-main.578123b4.js",
     "static/js/2.cc53e37e.chunk.js",
-    "static/css/main.effe0427.chunk.css",
-    "static/js/main.fd7c0c6e.chunk.js"
+    "static/css/main.ee3cd303.chunk.css",
+    "static/js/main.1de2be91.chunk.js"
   ]
 }
