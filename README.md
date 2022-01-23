@@ -1,15 +1,21 @@
 ## crapclap.github.io
 
-#### Descriotion
+
+
+### Description
 
 Official Web Site for 'crap clap'
 
-#### Enviornment
+
+
+### Enviornment
 
 - React.js
 - TypeScript
 
-#### Personnel
+
+
+### Personnel
 
 - Code by xen
 - Design by T.Sakuma
