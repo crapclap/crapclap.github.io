@@ -1,0 +1,10 @@
+<svg id="Group_68" data-name="Group 68" xmlns="http://www.w3.org/2000/svg" width="38.685" height="39.975" viewBox="0 0 38.685 39.975">
+  <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#fff" stroke-width="1.5">
+    <ellipse cx="19.343" cy="19.987" rx="19.343" ry="19.987" stroke="none"/>
+    <ellipse cx="19.343" cy="19.987" rx="18.593" ry="19.237" fill="none"/>
+  </g>
+  <g id="Polygon_1" data-name="Polygon 1" transform="translate(25.79 14.185) rotate(90)" fill="none">
+    <path d="M5.8,0l5.8,10.316H0Z" stroke="none"/>
+    <path d="M 5.802800178527832 3.059587955474854 L 2.564767837524414 8.816083908081055 L 9.04083251953125 8.816083908081055 L 5.802800178527832 3.059587955474854 M 5.802800178527832 4.76837158203125e-06 L 11.60560035705566 10.31608390808105 L 0 10.31608390808105 L 5.802800178527832 4.76837158203125e-06 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

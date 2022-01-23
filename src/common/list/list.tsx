@@ -1,8 +1,13 @@
+// MUSIC ARTWORK
 import GoodLookingMan_Artwork from '../../../src/discography/good-looking-man/img/glm-artwork.jpg'
 import Merry_Artwork from '../../../src/discography/merry/img/merry-artwork.jpg'
 import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-artwork.jpg'
 import Sugar_Artwork from '../../../src/discography/sugar/img/sugar-artwork.jpg'
 import SundayComesAgain_Artwork from '../../../src/discography/sunday-comes-again/img/sca-artwork.jpg'
+
+// VIDEO THUMBNAIL
+import OneThreeFour_Thumbnail from '../../common/img/thumbnail/134.png'
+import Nostalgia_Thumbnail from '../../common/img/thumbnail/nostalgia.png'
 
 type Song = {
   name: string,
@@ -25,38 +30,52 @@ type Music = {
 type Video = {
   title: string,
   url: string,
-  description: string
+  videoId: string,
+  thumbnail: string,
+  description: string,
 }
 
 export const VideoList: Video[] = [
   {
     title: '134',
     url: 'https://www.youtube.com/embed/7veW-1xhsj8',
-    description: 'MV'
+    videoId: '7veW-1xhsj8',
+    thumbnail: OneThreeFour_Thumbnail,
+    description: 'MV',
   },
   {
     title: 'ノスタルジー',
     url: 'https://www.youtube.com/embed/Q5x-ak26g4w',
+    videoId: 'Q5x-ak26g4w',
+    thumbnail: Nostalgia_Thumbnail,
     description: 'MV'
   },
   {
     title: 'メリー',
     url: 'https://www.youtube.com/embed/FGiCqA6oTZ4',
+    videoId: 'FGiCqA6oTZ4',
+    thumbnail: 'https://i.ytimg.com/vi/FGiCqA6oTZ4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLVAC2IInKtJ0nO3BOIjPVteLw1g',
     description: 'Official Stream'
   },
   {
     title: 'Good looking man',
     url: 'https://www.youtube.com/embed/_TQq7mJ_9oY',
+    videoId: '_TQq7mJ_9oY',
+    thumbnail: 'https://i.ytimg.com/vi/_TQq7mJ_9oY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxZZeVYOBwxoWIrATkBIHPY0NORg',
     description: 'Trailer'
   },
   {
     title: 'Love me do',
     url: 'https://www.youtube.com/embed/TdS6HnqyESY',
+    videoId: 'TdS6HnqyESY',
+    thumbnail: 'https://i.ytimg.com/vi/TdS6HnqyESY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDggIKWxrm-kG-TVRwjb0SBvFNyXQ',
     description: 'Official Stream'
   },
   {
     title: 'Sunday comes again',
     url: 'https://www.youtube.com/embed/7Fl0JkKIKjc',
+    videoId: '7Fl0JkKIKjc',
+    thumbnail: 'https://i.ytimg.com/vi/7Fl0JkKIKjc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNf6Mw4kmQbyvDNuS8ZTF8Nd3AXA',
     description: 'Trailer'
   }
 ]

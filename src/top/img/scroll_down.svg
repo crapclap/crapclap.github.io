@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="133.898" height="16" viewBox="0 0 133.898 16">
+  <g id="Icon_feather-arrow-down" data-name="Icon feather-arrow-down" transform="translate(118.373 -3.159)">
+    <path id="Path_134" data-name="Path 134" d="M18,7.5v7.317" transform="translate(-6.841 0)" fill="none" stroke="#6a6a6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_135" data-name="Path 135" d="M14.817,18l-3.659,3.659L7.5,18" transform="translate(0 -6.841)" fill="none" stroke="#6a6a6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+  <text id="SCROLL_DOWN" data-name="SCROLL DOWN" transform="translate(0 13)" fill="#383838" font-size="14" font-family="Arial-BoldMT, Arial" font-weight="700" letter-spacing="0.02em"><tspan x="0" y="0">SCROLL DOWN</tspan></text>
+</svg>

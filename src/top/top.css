@@ -2,15 +2,9 @@
 ul {
   -ms-overflow-x-style: none;    /* IE, Edge */
   scrollbar-width: none;       /* Firefox */
+  /* padding-inline-start: 10px; */
 }
+
 ul::-webkit-scrollbar {  /* Chrome, Safari */
   display:none;
 }
-
-/* .jss3 {
-  display: none;
-}
-
-.makeStyles-logo-3 {
-  display: none;
-} */
