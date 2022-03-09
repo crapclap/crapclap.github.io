@@ -4,7 +4,7 @@ import '../../node_modules/react-modal-video/scss/modal-video.scss';
 
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom'
-import { Grid, Container, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import ModalVideo from 'react-modal-video'
 
 import { GridStyles, ContentStyles } from './styles'

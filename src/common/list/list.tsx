@@ -4,6 +4,7 @@ import Merry_Artwork from '../../../src/discography/merry/img/merry-artwork.jpg'
 import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-artwork.jpg'
 import Sugar_Artwork from '../../../src/discography/sugar/img/sugar-artwork.jpg'
 import SundayComesAgain_Artwork from '../../../src/discography/sunday-comes-again/img/sca-artwork.jpg'
+import RingsABell_Artwork from '../../../src/discography/ringsabell/img/ringsabell-artwork.png'
 
 // VIDEO THUMBNAIL
 import OneThreeFour_Thumbnail from '../../common/img/thumbnail/134.png'
@@ -20,7 +21,6 @@ type Music = {
   artwork: string,
   page: string,
   song: Song[],
-  // song_id: string[],
   link: {
     apple_music: string,
     spotyfy: string,
@@ -79,6 +79,23 @@ export const VideoList: Video[] = [
     description: 'Trailer'
   }
 ]
+
+export const RingsABell: Music = {
+  title: '春の陽気に誘われて',
+  order: '3rd Single',
+  artwork: RingsABell_Artwork,
+  page: 'ringsabell',
+  song: [
+    {
+      name: '春の陽気に誘われて',
+      id: 'RingsABell',
+    }
+  ],
+  link: {
+    apple_music: 'https://music.apple.com/jp/album/%E6%98%A5%E3%81%AE%E9%99%BD%E6%B0%97%E3%81%AB%E8%AA%98%E3%82%8F%E3%82%8C%E3%81%A6-single/1612200755?l=en&ls=1&app=music',
+    spotyfy: 'https://big-up.style/lerdFUbU29',
+  }
+}
 
 export const Sugar: Music = {
   title: 'Sugar',
@@ -195,6 +212,7 @@ export const SundayComesAgain: Music =
 }
 
 export const MusicList: Music[] = [
+  RingsABell,
   Sugar,
   Nostalgia,
   Merry,
