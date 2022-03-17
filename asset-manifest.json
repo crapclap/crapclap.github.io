@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.ee2fad37.chunk.css",
-    "main.js": "/static/js/main.2295d4a4.chunk.js",
-    "main.js.map": "/static/js/main.2295d4a4.chunk.js.map",
+    "main.js": "/static/js/main.988abf0f.chunk.js",
+    "main.js.map": "/static/js/main.988abf0f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.92a6838a.js",
     "runtime-main.js.map": "/static/js/runtime-main.92a6838a.js.map",
     "static/css/2.d2ad73d7.chunk.css": "/static/css/2.d2ad73d7.chunk.css",
-    "static/js/2.66c13cf3.chunk.js": "/static/js/2.66c13cf3.chunk.js",
-    "static/js/2.66c13cf3.chunk.js.map": "/static/js/2.66c13cf3.chunk.js.map",
+    "static/js/2.c68c6c74.chunk.js": "/static/js/2.c68c6c74.chunk.js",
+    "static/js/2.c68c6c74.chunk.js.map": "/static/js/2.c68c6c74.chunk.js.map",
     "static/js/3.467d02da.chunk.js": "/static/js/3.467d02da.chunk.js",
     "static/js/3.467d02da.chunk.js.map": "/static/js/3.467d02da.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d2ad73d7.chunk.css.map": "/static/css/2.d2ad73d7.chunk.css.map",
     "static/css/main.ee2fad37.chunk.css.map": "/static/css/main.ee2fad37.chunk.css.map",
-    "static/js/2.66c13cf3.chunk.js.LICENSE.txt": "/static/js/2.66c13cf3.chunk.js.LICENSE.txt",
+    "static/js/2.c68c6c74.chunk.js.LICENSE.txt": "/static/js/2.c68c6c74.chunk.js.LICENSE.txt",
     "static/media/134.ee7c5cdb.png": "/static/media/134.ee7c5cdb.png",
     "static/media/apple-music.49964240.svg": "/static/media/apple-music.49964240.svg",
     "static/media/arrow.edc188b7.svg": "/static/media/arrow.edc188b7.svg",
@@ -30,6 +30,7 @@
     "static/media/nostalgia.7519475f.png": "/static/media/nostalgia.7519475f.png",
     "static/media/pc_bg.963a0e7b.svg": "/static/media/pc_bg.963a0e7b.svg",
     "static/media/play_button.1d9742d4.svg": "/static/media/play_button.1d9742d4.svg",
+    "static/media/ringsabell-artwork.e56e69dc.png": "/static/media/ringsabell-artwork.e56e69dc.png",
     "static/media/sca-artwork.eab616a3.jpg": "/static/media/sca-artwork.eab616a3.jpg",
     "static/media/scroll_down.78671b24.svg": "/static/media/scroll_down.78671b24.svg",
     "static/media/scroll_left.84345a50.svg": "/static/media/scroll_left.84345a50.svg",
@@ -44,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.92a6838a.js",
     "static/css/2.d2ad73d7.chunk.css",
-    "static/js/2.66c13cf3.chunk.js",
+    "static/js/2.c68c6c74.chunk.js",
     "static/css/main.ee2fad37.chunk.css",
-    "static/js/main.2295d4a4.chunk.js"
+    "static/js/main.988abf0f.chunk.js"
   ]
 }
