@@ -72,6 +72,7 @@ export const RingsABellLyric = () => {
             やわらかな日々は<br />
             特別に見えて 平凡な日常<br />
           </div>
+          {/* test */}
         </Typography>
       </Container>
     </div>
