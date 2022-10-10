@@ -2,13 +2,17 @@
 import GoodLookingMan_Artwork from '../../../src/discography/good-looking-man/img/glm-artwork.jpg'
 import Merry_Artwork from '../../../src/discography/merry/img/merry-artwork.jpg'
 import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-artwork.jpg'
+import RingsABell_Artwork from '../../../src/discography/ringsabell/img/ringsabell-artwork.png'
+import SlowmotionFilm_Artwork from '../../../src/discography/slowmotion-film/img/slowmotion-film.png'
 import Sugar_Artwork from '../../../src/discography/sugar/img/sugar-artwork.jpg'
 import SundayComesAgain_Artwork from '../../../src/discography/sunday-comes-again/img/sca-artwork.jpg'
-import RingsABell_Artwork from '../../../src/discography/ringsabell/img/ringsabell-artwork.png'
+
 
 // VIDEO THUMBNAIL
 import OneThreeFour_Thumbnail from '../../common/img/thumbnail/134.png'
 import Nostalgia_Thumbnail from '../../common/img/thumbnail/nostalgia.png'
+import SlowmotionFilm_Thumbnail from '../../common/img/thumbnail/slowmotion-film.png'
+import RingsABell_Thumbnail from '../../common/img/thumbnail/ringsabell.png'
 
 type Song = {
   name: string,
@@ -36,6 +40,20 @@ type Video = {
 }
 
 export const VideoList: Video[] = [
+  {
+    title: 'スローモーションフィルム',
+    url: 'https://youtu.be/jNTnYXFiPIA',
+    videoId: 'jNTnYXFiPIA',
+    thumbnail: SlowmotionFilm_Thumbnail,
+    description: 'Lyric Video',
+  },
+  {
+    title: '春の陽気に誘われて',
+    url: 'https://www.youtube.com/watch?v=zgmIGma_Las',
+    videoId: 'zgmIGma_Las',
+    thumbnail: RingsABell_Thumbnail,
+    description: 'Lyric Video',
+  },
   {
     title: '134',
     url: 'https://www.youtube.com/embed/7veW-1xhsj8',
@@ -80,6 +98,23 @@ export const VideoList: Video[] = [
   }
 ]
 
+export const SlowmotionFilm: Music = {
+  title: 'スローモーションフィルム',
+  order: '4th Single',
+  artwork: SlowmotionFilm_Artwork,
+  page: 'slowmotion-film',
+  song: [
+    {
+      name: 'スローモーションフィルム',
+      id: 'SlowmotionFilm',
+    }
+  ],
+  link: {
+    apple_music: 'https://music.apple.com/jp/album/%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0-single/1647356647?l=en&ls=1&app=music',
+    spotyfy: 'https://open.spotify.com/artist/1qefytAD4qHuTqxo2iw6sD',
+  }
+}
+
 export const RingsABell: Music = {
   title: '春の陽気に誘われて',
   order: '3rd Single',
@@ -93,7 +128,7 @@ export const RingsABell: Music = {
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/%E6%98%A5%E3%81%AE%E9%99%BD%E6%B0%97%E3%81%AB%E8%AA%98%E3%82%8F%E3%82%8C%E3%81%A6-single/1612200755?l=en&ls=1&app=music',
-    spotyfy: 'https://big-up.style/lerdFUbU29',
+    spotyfy: 'https://open.spotify.com/album/0gCHwVxGh5asQUxkO1fRj7',
   }
 }
 
@@ -212,6 +247,7 @@ export const SundayComesAgain: Music =
 }
 
 export const MusicList: Music[] = [
+  SlowmotionFilm,
   RingsABell,
   Sugar,
   Nostalgia,

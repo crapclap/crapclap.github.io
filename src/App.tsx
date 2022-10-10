@@ -14,6 +14,7 @@ import GoodLookingMan from './discography/good-looking-man/glm'
 import Merry from './discography/merry/merry'
 import Nostalgia from './discography/nostalgia/nostalgia'
 import RingsABell from './discography/ringsabell/ringsabell'
+import SlowmotionFilm from './discography/slowmotion-film/slowmotion-film';
 import SundayComesAgain from './discography/sunday-comes-again/sca'
 import Sugar from './discography/sugar/sugar'
 
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/discography/merry" component={Merry} />
             <Route exact path="/discography/nostalgia" component={Nostalgia} />
             <Route exact path="/discography/ringsabell" component={RingsABell} />
+            <Route exact path="/discography/slowmotion-film" component={SlowmotionFilm} />
             <Route exact path="/discography/sugar" component={Sugar} />
             <Route exact path="/discography/sunday-comes-again" component={SundayComesAgain} />
           </Switch>
