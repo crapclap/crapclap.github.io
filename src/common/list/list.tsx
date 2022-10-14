@@ -111,7 +111,7 @@ export const SlowmotionFilm: Music = {
   ],
   link: {
     apple_music: 'https://music.apple.com/jp/album/%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0-single/1647356647?l=en&ls=1&app=music',
-    spotyfy: 'https://open.spotify.com/artist/1qefytAD4qHuTqxo2iw6sD',
+    spotyfy: 'https://open.spotify.com/album/5Q5BaGjsqd1sOWxtSPztr9',
   }
 }
 
