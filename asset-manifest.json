@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ee2fad37.chunk.css",
-    "main.js": "/static/js/main.7951b727.chunk.js",
-    "main.js.map": "/static/js/main.7951b727.chunk.js.map",
+    "main.js": "/static/js/main.56c0e370.chunk.js",
+    "main.js.map": "/static/js/main.56c0e370.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.92a6838a.js",
     "runtime-main.js.map": "/static/js/runtime-main.92a6838a.js.map",
     "static/css/2.d2ad73d7.chunk.css": "/static/css/2.d2ad73d7.chunk.css",
@@ -17,6 +17,7 @@
     "static/media/134.ee7c5cdb.png": "/static/media/134.ee7c5cdb.png",
     "static/media/apple-music.49964240.svg": "/static/media/apple-music.49964240.svg",
     "static/media/arrow.edc188b7.svg": "/static/media/arrow.edc188b7.svg",
+    "static/media/awaken-from-a-dream.73b2120e.jpg": "/static/media/awaken-from-a-dream.73b2120e.jpg",
     "static/media/crapclap.2d99a44f.svg": "/static/media/crapclap.2d99a44f.svg",
     "static/media/follow_us.b6698262.svg": "/static/media/follow_us.b6698262.svg",
     "static/media/follow_us_sp.04f2456e.svg": "/static/media/follow_us_sp.04f2456e.svg",
@@ -50,6 +51,6 @@
     "static/css/2.d2ad73d7.chunk.css",
     "static/js/2.b3aa16f1.chunk.js",
     "static/css/main.ee2fad37.chunk.css",
-    "static/js/main.7951b727.chunk.js"
+    "static/js/main.56c0e370.chunk.js"
   ]
 }
