@@ -9,10 +9,11 @@ import SundayComesAgain_Artwork from '../../../src/discography/sunday-comes-agai
 
 
 // VIDEO THUMBNAIL
-import OneThreeFour_Thumbnail from '../../common/img/thumbnail/134.png'
+import AwakenFromADream_Thumbneil from '../../common/img/thumbnail/awaken-from-a-dream.jpg'
 import Nostalgia_Thumbnail from '../../common/img/thumbnail/nostalgia.png'
-import SlowmotionFilm_Thumbnail from '../../common/img/thumbnail/slowmotion-film.png'
+import OneThreeFour_Thumbnail from '../../common/img/thumbnail/134.png'
 import RingsABell_Thumbnail from '../../common/img/thumbnail/ringsabell.png'
+import SlowmotionFilm_Thumbnail from '../../common/img/thumbnail/slowmotion-film.png'
 
 type Song = {
   name: string,
@@ -40,6 +41,13 @@ type Video = {
 }
 
 export const VideoList: Video[] = [
+  {
+    title: '夢から醒めたら',
+    url: 'https://youtu.be/yoY3kVxj_1U',
+    videoId: 'yoY3kVxj_1U',
+    thumbnail: AwakenFromADream_Thumbneil,
+    description: 'MV',
+  },
   {
     title: 'スローモーションフィルム',
     url: 'https://youtu.be/jNTnYXFiPIA',
