@@ -660,5 +660,6 @@ export const InitiationBlue = () => {
           </div>
         </Typography>
       </Container>
-      );
+    </div>
+  );
 };

@@ -10,6 +10,7 @@ import Header from './common/header/header'
 import Top from './top/top'
 import Discography from './discography/discography'
 
+import DepartmentStore from './discography/department-store/ds'
 import GoodLookingMan from './discography/good-looking-man/glm'
 import Merry from './discography/merry/merry'
 import Nostalgia from './discography/nostalgia/nostalgia'
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/" component={Top} />
             <Route exact path="/crapclap" component={Top} />
             <Route exact path="/discography" component={Discography} />
+            <Route exact path="/discography/department-store" component={DepartmentStore} />
             <Route exact path="/discography/good-looking-man" component={GoodLookingMan} />
             <Route exact path="/discography/merry" component={Merry} />
             <Route exact path="/discography/nostalgia" component={Nostalgia} />
