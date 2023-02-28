@@ -1,4 +1,5 @@
 // MUSIC ARTWORK
+import DepartmentStore_Artwork from '../../../src/discography/department-store/img/ds-artwork.jpg'
 import GoodLookingMan_Artwork from '../../../src/discography/good-looking-man/img/glm-artwork.jpg'
 import Merry_Artwork from '../../../src/discography/merry/img/merry-artwork.jpg'
 import Nostalgia_Artwork from '../../../src/discography/nostalgia/img/nostalgia-artwork.jpg'
@@ -105,6 +106,51 @@ export const VideoList: Video[] = [
     description: 'Trailer'
   }
 ]
+
+export const DepartmentStore: Music = {
+  title: 'DEPARTMENT STORE',
+  order: '1st Album',
+  artwork: DepartmentStore_Artwork,
+  page: 'department-store',
+  song: [
+    {
+      name: '夢から醒めたら',
+      id: 'AwakenFromADream',
+    },
+    {
+      name: 'ハンバーガー・ロマンス',
+      id: 'HamburgerRomance',
+    },{
+      name: '春の陽気に誘われて',
+      id: 'RingsABell',
+    },{
+      name: 'マジックアワー',
+      id: 'MagicHour',
+    },{
+      name: 'コバルトアワー',
+      id: 'CobaltHour',
+    },{
+      name: 'スローモーションフィルム',
+      id: 'SlowmotionFilm',
+    },{
+      name: 'あしたてんきになれ',
+      id: 'RainGoAway',
+    },{
+      name: 'オレンジ',
+      id: 'Orange',
+    },{
+      name: 'ハニーマスタード',
+      id: 'HoneyMustard',
+    },{
+      name: 'イニシエーション・ブルー',
+      id: 'InitiationBlue',
+    },
+  ],
+  link: {
+    apple_music: 'https://music.apple.com/jp/album/%E3%82%B9%E3%83%AD%E3%83%BC%E3%83%A2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%83%A0-single/1647356647?l=en&ls=1&app=music',
+    spotyfy: 'https://open.spotify.com/album/5Q5BaGjsqd1sOWxtSPztr9',
+  }
+}
 
 export const SlowmotionFilm: Music = {
   title: 'スローモーションフィルム',
