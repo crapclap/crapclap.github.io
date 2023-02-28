@@ -23,9 +23,9 @@ import Artwork from './img/ds-artwork.jpg'
 import AppleMusicLogo from '../../common/img/apple-music.svg'
 import SpotifyLogo from '../../common/img/spotify.png'
 import Arrow from '../../common/img/arrow.svg'
-import { GoodLookingMan as Information } from '../../common/list/list';
+import { DepartmentStore as Information } from '../../common/list/list';
 
-const GoodLookingMan = () => {
+const DepartmentStore = () => {
 
   const cont = ContentStyles()
   const grid = GridStyles()
@@ -196,4 +196,4 @@ const GoodLookingMan = () => {
   )
 }
 
-export default GoodLookingMan
+export default DepartmentStore;
